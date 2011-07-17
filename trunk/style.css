@@ -112,7 +112,7 @@ h2, h2 a {
 h2 {
 	border-bottom: 1px solid #ccc; 
 	margin-bottom: 20px; 
-	padding-bottom: 8px;
+	padding-bottom: 6px;
 }
 
 h3 { font-family: AniversRegular, arial; font-size: 21px; text-transform: uppercase;}
@@ -144,11 +144,11 @@ hr {
 /* HEADER */
 
 #header {  
-    background: url(images/header.png) center center no-repeat;
+    background: url(images/header1.png) center -80px no-repeat;
 }
 #header h1, #header h2 { text-indent: -99999px; border: 0; }
 
-.header_section { height: 320px; }
+.header_section { height: 300px; }
 
 /* END HEADER */
 
@@ -212,6 +212,7 @@ hr {
 }
 
 #content {
+    margin-top: 30px;
 	overflow: hidden;
 }
 
@@ -264,7 +265,7 @@ hr {
     color: #063461;
     text-transform: none;
 	text-align: center;
-	text-shadow: 0 1px 0 #5fa4bf; /* FF3.5+, Opera 9+, Saf1+, Chrome */
+	text-shadow: 0 1px 0 #5fa4bf;
 	margin: 0 0 10px;
 	border: 0;
 }
@@ -274,7 +275,21 @@ hr {
 }
 
 #sidebar .recent-post {
+    position: relative;
 	clear: both;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+#sidebar .recent-post:hover {
+    left: 2px;
+}
+
+#sidebar .recent-post a {
+    display: block;
 }
 
 #sidebar .cats-comments-bar {
@@ -329,7 +344,7 @@ ul.categories li a {
     float: left;
     font-family: LeagueGothicRegular, verdana;
     font-size: 21px;
-    color: #aaa;
+    color: #888;
     padding-top: 3px;
 }
 .post-header .entry-date { width: 110px; }
@@ -403,11 +418,11 @@ table.dt { width: 100%; }
 .entry .upcoming a { color: #999; text-decoration: underline; }
 
 .entry {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
 .entry .entry-footer {
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
 .read-more {
@@ -467,7 +482,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
  * --------------------------------------------- */
 
 .post h2 {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 #single #content { padding-top: 20px; }
@@ -744,12 +759,12 @@ cite, cite a { font-size: 18px; font-style: normal; font-weight: bold; }
 .commentlist .comment-meta { font-size: 11px; color: #aaa; }
 
 input, textarea {
-		 -moz-border-radius: 3px; /* FF1+ */
-	  -webkit-border-radius: 3px; /* Saf3+, Chrome */
-	          border-radius: 3px; /* Opera 10.5, IE 9 */
-	box-shadow:inset 0 3px 0 #ccc;
-	-moz-box-shadow:inset 0 3px 0 #ccc;
+		 -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	          border-radius: 3px;
+	   -moz-box-shadow:inset 0 3px 0 #ccc;
 	-webkit-box-shadow:inset 0 3px 0 #ccc;
+            box-shadow:inset 0 3px 0 #ccc;
 	border: 0;
 	background-color: #ddd;
 	padding: 3px;
@@ -759,9 +774,9 @@ input[type=submit] {
 	background-color: #900; 
 	color: #fff; 
 	margin-top: 10px; 
-	box-shadow:none;
-	-moz-box-shadow:none;
+	   -moz-box-shadow:none;
 	-webkit-box-shadow:none;
+	        box-shadow:none;
 	padding: 0 7px;
 }
 
@@ -918,6 +933,17 @@ blockquote cite {
     z-index: -1;
 }
 
+#xxbackground-texture {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/background-texture.png) repeat;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: -1;
+}
+
 
 /* ABOUT US PAGE */
 .subtitle {
@@ -928,8 +954,8 @@ blockquote cite {
 	margin-bottom: 15px;
 }
 #about_us #hero	{
-	max-width:580px;
-	margin-top: 0px;
+	max-width: 580px;
+	margin-top: 0;
 }
 
 #about_us .shortinfo {
@@ -957,7 +983,7 @@ blockquote cite {
 
 #about_us .info-label {
 	color: #999;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	font-size: 12px;
 }
 
@@ -973,9 +999,9 @@ blockquote cite {
     margin: 15px 0;
 }
 .button {
-       -moz-border-radius: 13px; /* FF1+ */
-    -webkit-border-radius: 13px; /* Saf3-4 */
-            border-radius: 13px; /* Opera 10.5, IE 9, Saf5, Chrome */
+       -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+            border-radius: 13px;
     height: 20px;
     padding: 5px 10px;
     font-family: LeagueGothicRegular, verdana;
@@ -1010,9 +1036,9 @@ blockquote cite {
 	margin-bottom: 15px;
 	padding-bottom: 10px; 
 	background-color: #333;
-	     -moz-border-radius: 5px; /* FF1+ */
-	  -webkit-border-radius: 5px; /* Saf3+, Chrome */
-	          border-radius: 5px; /* Opera 10.5, IE 9 */
+	     -moz-border-radius: 5px;
+	  -webkit-border-radius: 5px;
+	          border-radius: 5px;
 }
 .gcal-widget-post div{ color: #fff; }
 .gcal-widget-post a { color: #fff; text-decoration: underline; }
@@ -1067,12 +1093,12 @@ a.gcal-tip {
     cursor: default;
     
     border: 2px solid #fff;
-       -moz-border-radius: 20px; /* FF1+ */
-    -webkit-border-radius: 20px; /* Saf3-4 */
-            border-radius: 20px; /* Opera 10.5, IE 9, Saf5, Chrome */
-           -moz-box-shadow: 0px 0px 2px #333; /* FF3.5+ */
-        -webkit-box-shadow: 0px 0px 2px #333; /* Saf3.0+, Chrome */
-                box-shadow: 0px 0px 2px #333; /* Opera 10.5, IE 9.0 */
+       -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+           -moz-box-shadow: 0 0 2px #333;
+        -webkit-box-shadow: 0 0 2px #333;
+                box-shadow: 0 0 2px #333;
 }
 
 a.gcal-tip.linkable {
@@ -1298,9 +1324,9 @@ div.spch-bub-outside {
 #flickrGallery .flickrGalleryCntr {
     background: url('images/gallery-wood.jpg') center center no-repeat;
 	padding: 10px;
-	   -moz-border-radius: 10px; /* FF1+ */
-    -webkit-border-radius: 10px; /* Saf3-4 */
-            border-radius: 10px; /* Opera 10.5, IE 9, Saf5, Chrome */
+	   -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     height: 230px;
 }
 #flickrGallery .flickrGalleryHeader { display: none; }
@@ -1316,7 +1342,7 @@ div.spch-bub-outside {
     font-family: AdelleBasicBold, georgia;
     color: #000;
     opacity: 0.65;
-    text-shadow: 0 1px 0 #ccc; /* FF3.5+, Opera 9+, Saf1+, Chrome */
+    text-shadow: 0 1px 0 #ccc;
     margin: 0 0 10px;
 }
 #flickrGallery.simplemodal-data .flickrGalleryCntr h3 { display: none; }
@@ -1361,12 +1387,12 @@ div.spch-bub-outside {
     vertical-align: middle;
     text-align: center;
     background: url('images/gallery-dark.jpg') center center no-repeat;
-       -moz-border-radius: 3px; /* FF1+ */
-    -webkit-border-radius: 3px; /* Saf3-4 */
-            border-radius: 3px; /* Opera 10.5, IE 9, Saf5, Chrome */
-       -moz-box-shadow: inset 0 0 25px #111; /* FF3.5+ */
-    -webkit-box-shadow: inset 0 0 25px #111; /* Saf3.0+, Chrome */
-            box-shadow: inset 0 0 25px #111; /* Opera 10.5, IE 9 */
+       -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+       -moz-box-shadow: inset 0 0 25px #111;
+    -webkit-box-shadow: inset 0 0 25px #111;
+            box-shadow: inset 0 0 25px #111;
     
 }
 .flickrGalleryImageView img {
@@ -1384,7 +1410,7 @@ div.spch-bub-outside {
 }
 
 .flickrGalleryImageMenu a {
-	color: #ffffff;
+	color: #fff;
 	width: 100%;
 }
 
@@ -1396,9 +1422,9 @@ div.spch-bub-outside {
 	top: 0;
 	left: 0;
 	right: 0;
-	   -moz-box-shadow: 0px 2px 2px #916537, inset 0 1px 0 #eee; /* FF3.5+ */
-    -webkit-box-shadow: 0px 2px 2px #916537, inset 0 1px 0 #eee; /* Saf3.0+, Chrome */
-            box-shadow: 0px 2px 2px #916537, inset 0 1px 0 #eee; /* Opera 10.5, IE 9 */
+	   -moz-box-shadow: 0 2px 2px #916537, inset 0 1px 0 #eee;
+    -webkit-box-shadow: 0 2px 2px #916537, inset 0 1px 0 #eee;
+            box-shadow: 0 2px 2px #916537, inset 0 1px 0 #eee;
 	   -moz-border-radius-topleft:   10px;
 	   -moz-border-radius-topright:  10px;
 	-webkit-border-top-left-radius:  10px;
@@ -1469,9 +1495,9 @@ div.spch-bub-outside {
 	padding: 1px;
 	opacity: .50;
 	-webkit-transition: opacity 0.2s ease-in-out;
-	-moz-transition: opacity 0.2s ease-in-out;
-	-o-transition: opacity 0.2s ease-in-out;
-	transition: opacity 0.2s ease-in-out;
+	   -moz-transition: opacity 0.2s ease-in-out;
+	     -o-transition: opacity 0.2s ease-in-out;
+	        transition: opacity 0.2s ease-in-out;
 }
 .flickrGalleryImageThumbs li:hover {
     opacity: 1;
@@ -1503,29 +1529,25 @@ div.spch-bub-outside {
  * may not operate correctly without them.
  */
 
-.jspContainer
-{
+.jspContainer {
 	overflow: hidden;
 	position: relative;
 }
 
-.jspPane
-{
+.jspPane {
 	position: absolute;
 }
 
-.jspVerticalBar
-{
+.jspVerticalBar {
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 3px;
 	width: 5px;
 	height: 100%;
 	background: transparent;
 }
 
-.jspHorizontalBar
-{
+.jspHorizontalBar {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1535,38 +1557,33 @@ div.spch-bub-outside {
 }
 
 .jspVerticalBar *,
-.jspHorizontalBar *
-{
+.jspHorizontalBar * {
 	margin: 0;
 	padding: 0;
 }
 
-.jspCap
-{
+.jspCap {
 	display: none;
 }
 
-.jspHorizontalBar .jspCap
-{
+.jspHorizontalBar .jspCap {
 	float: left;
 }
 
-.jspTrack
-{
+.jspTrack {
 	background: transparent;
 	position: relative;
 }
 
-.jspDrag
-{
+.jspDrag {
 	background: #aaa;
 	position: relative;
 	top: 0;
 	left: 0;
 	cursor: pointer;
-	   -moz-border-radius: 3px; /* FF1+ */
-    -webkit-border-radius: 3px; /* Saf3-4 */
-            border-radius: 3px; /* Opera 10.5, IE 9, Saf5, Chrome */
+	   -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
 }
 
 .jspHorizontalBar .jspTrack,
@@ -1576,46 +1593,39 @@ div.spch-bub-outside {
 	height: 100%;
 }
 
-.jspArrow
-{
+.jspArrow {
 	background: #50506d;
 	text-indent: -20000px;
 	display: block;
 	cursor: pointer;
 }
 
-.jspArrow.jspDisabled
-{
+.jspArrow.jspDisabled {
 	cursor: default;
 	background: #80808d;
 }
 
-.jspVerticalBar .jspArrow
-{
+.jspVerticalBar .jspArrow {
 	height: 16px;
 }
 
-.jspHorizontalBar .jspArrow
-{
+.jspHorizontalBar .jspArrow {
 	width: 5px;
 	float: left;
 	height: 100%;
 }
 
-.jspVerticalBar .jspArrow:focus
-{
+.jspVerticalBar .jspArrow:focus {
 	outline: none;
 }
 
-.jspCorner
-{
+.jspCorner {
 	background: #eeeef4;
 	float: left;
 	height: 100%;
 }
 
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner
-{
+* html .jspCorner {
 	margin: 0 -3px 0 0;
 }
