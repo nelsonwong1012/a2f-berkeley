@@ -1,0 +1,116 @@
+/* widgetDisplay()
+--------------------------------------------------*/
+.gcal-widget-post {
+	font-family: Arial;
+	font-size: .8em;
+	width: 240px;
+}
+.gcal-widget-date, .gcal-widget-event {
+	padding: 2px 0;
+}
+.gcal-widget-date {
+	background: #321;
+	color: #fff;
+	padding-left: 5px;
+}
+.gcal-widget-event {
+	border-bottom: 1px dotted #321;
+}
+.gcal-widget-block {
+	padding-top: 5px;
+	padding-left: 12px;
+	border-left: 5px solid #862;
+}
+.gcal-widget-time {
+	display: block;
+	float: left;
+}
+.gcal-widget-title {
+	margin-left: 55px;
+}
+.gcal-widget-location {
+	font-style: italic;
+}
+
+
+/* calendarDisplay()
+--------------------------------------------------*/
+.gcal-calendar div, .gcal-calendar p, .gcal-calendar h2, .gcal-calendar h3 { 
+	font-family: Arial;
+/*	font-size: 14px;*/
+	margin: 0;
+	padding: 0;
+}
+
+.gcal-calendar { 
+	margin-bottom: 20px; 
+	padding: 10px;
+}
+
+.gcal-calendar .gcal-calendar-date {
+	float: left;
+	width: 60px;
+	text-align: center;
+	font-size: 9px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.gcal-calendar .gcal-calendar-date .gcal-calendar-day {
+	padding: 2px 0;
+	background: #dd1013 url(images/gcal-calendar-day.gif) repeat-x top left;
+	font-size: 11px;
+	color: #fff;
+}
+
+.gcal-calendar .gcal-calendar-date h2 {
+	font-size: 24px;
+}
+.gcal-calendar .gcal-calendar-date h3 {
+	font-size: 16px;
+	margin: 3px 0 1px;
+}
+
+.gcal-calendar .gcal-calendar-prose {
+	margin-left: 80px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #222;
+}
+
+.gcal-calendar a {
+	color: #0046c3;
+}
+
+.gcal-calendar .gcal-calendar-prose h2 {
+	font-size: 16px;
+	color: #ff9c00;
+}
+
+.gcal-calendar .gcal-calendar-location {
+	font-size: 11px;
+}
+
+.gcal-calendar .gcal-calendar-content {
+	margin-top: 18px;
+}
+
+.gcal-calendar-featured {
+	background: #fffcdc url(images/gcal-calendar-featured.gif) repeat-x top left;
+	border-top: 2px solid #fff87f;
+}
+
+/*---- CLEARFIX HACK ----*/
+.clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+}
+
+/* For IE7 */
+.clearfix {display:inline-block;}
+
+/* For IE6 */
+* html .clearfix {height: 1%;}

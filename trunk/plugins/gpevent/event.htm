@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#gpevent_dlg.dialog_title}</title>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/mctabs.js"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/form_utils.js"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/validate.js"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/editable_selects.js"></script>
+	<script type="text/javascript" src="js/gpevent.js"></script>
+	<link href="css/advimage.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="advimage" style="display: none">
+    <form onsubmit="GPEventDialog.insert();return false;" action="#"> 
+
+		<div class="panel_wrapper">
+			<div id="general_panel" class="panel current">
+				<fieldset>
+						<legend>{#gpevent_dlg.general}</legend>
+
+						<table class="properties">
+							<tr> 
+								<td class="column1"><label id="namelabel" for="gpname">{#gpevent_dlg.name}</label></td> 
+								<td colspan="2"><input id="name" name="gpname" type="text" value="" /></td> 
+							</tr>
+							<tr> 
+								<td class="column1"><label id="datelabel" for="gpdate">{#gpevent_dlg.date}</label></td> 
+								<td colspan="2"><input id="date" name="gpdate" type="text" value="" /></td> 
+							</tr>
+							<tr> 
+								<td class="column1"><label id="timelabel" for="gptime">{#gpevent_dlg.time}</label></td> 
+								<td colspan="2"><input id="time" name="gptime" type="text" value="" /></td> 
+							</tr>	
+							<tr> 
+								<td class="column1"><label id="locationlabel" for="gplocation">{#gpevent_dlg.location}</label></td> 
+								<td colspan="2"><input id="location" name="gplocation" type="text" value="" /></td> 
+							</tr>
+							<tr> 
+								<td class="column1"><label id="infolabel" for="gpinfo">{#gpevent_dlg.info}</label></td> 
+								<td colspan="2"><input id="info" name="gpinfo" type="text" value="" /></td> 
+							</tr>
+						</table>
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="mceActionPanel">
+			<input type="submit" id="insert" name="insert" value="{#insert}" />
+			<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+    </form>
+</body> 
+</html> 
