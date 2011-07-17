@@ -14,6 +14,7 @@ $('#background-image').attr('src',background_image_src);
 // Onready
 $(document).ready(function() {
 	// Background Resize
+	bgResize();
 	$(window).resize(function() {
 		bgResize();
 	});
