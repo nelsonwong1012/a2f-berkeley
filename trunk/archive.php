@@ -18,21 +18,23 @@ Template Name: Archive
 					$active = "";
 			}
 			?>
-			<li class="All grid_4 <?php echo $active; ?>"><a href="<?php echo get_permalink(169)?>"><span>&nbsp;</span>All Categories</a></li>
+			<li class="All grid_4 <?php echo $active; ?>"><a href="<?php echo get_permalink(3142)?>"><span>&nbsp;</span>All Categories</a></li>
 			<?php 
 				$category_ids = get_all_category_ids(); 
 				$holding_original_query = clone $wp_query;
 				foreach($category_ids as $cat_id) {
 					$my_query = new WP_Query("cat=$cat_id");
 					if ($my_query->have_posts()) {
-						$cat_name = get_cat_name($cat_id);
+						$category_from_id = get_category( $cat_id );
+						$cat_slug = $category_from_id->slug;
+						$cat_name = $category_from_id->name;
 						if (!strcmp($cat_name, single_cat_title('',false))) {
 							$active = "active";
 						}
 						else {
 							$active = "";
 						}
-						echo '<li class="' . $cat_name . ' grid_4 ' . $active . '"><a href="' . get_bloginfo('url') . '/category/' . strtolower($cat_name) . '" title="View all posts filed under ' . $cat_name . '"><span>&nbsp;</span>' . $cat_name . '</a> </li>';
+						echo '<li class="' . $cat_name . ' grid_4 ' . $active . '"><a href="' . get_bloginfo('url') . '/archives/' . strtolower($cat_slug) . '" title="View all posts filed under ' . $cat_name . '"><span>&nbsp;</span>' . $cat_name . '</a> </li>';
 					}
 				}
 				$wp_query = clone $holding_original_query;

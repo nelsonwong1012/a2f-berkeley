@@ -25,7 +25,7 @@
 		<?php
 
 		//The Query
-		query_posts('posts_per_page=5');
+		query_posts('posts_per_page=5&cat=-6');
 
 		//The Loop
 		if ( have_posts() ) : while ( have_posts() ) : the_post();

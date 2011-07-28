@@ -46,13 +46,18 @@ function gp_comments($comment, $args, $depth) {
 // prints out thumbnails
 function sidebar_thumbnails() {
     $str = '<h3>Photos</h3>';
-	query_posts("category_name=recap+Recap+Memories&showposts=5");
+    $query_args = array('category_name' => 'Memories',
+			'showposts'     => 5);
+	query_posts($query_args);
 	$first_thumbnail = 0;
 	if (have_posts()) : while (have_posts()) : the_post();
 		$custom_fields = get_post_custom();
 		$my_custom_field = $custom_fields['thumbnail'];
-		foreach ($my_custom_field as $key => $thumbnail) {
-			$str .= linktoimage(resizeimage($thumbnail), get_permalink());
+		if ($my_custom_field)
+		{
+		  foreach ($my_custom_field as $key => $thumbnail) {
+		    $str .= linktoimage(resizeimage($thumbnail), get_permalink());
+		  }
 		}
 //		$thumbnail = getcustom('thumbnail');
 //		if ($thumbnail) {

@@ -27,7 +27,7 @@ get_header();
                         <p class="shortinfo"><?php outputcustom('church'); ?></p>
                     </div>
                     <div class="grid_5 omega">
-                    	<h3>The Staff (pictured above)</h3>
+                    	<h3>The Staff</h3>
                         <p class="shortinfo"><?php outputcustom('staff'); ?></p>
                     </div>
 
@@ -41,15 +41,15 @@ get_header();
                     	<p><?php outputcustom('advisors'); ?></p>
                     </div>
                     <div class="grid_5 omega">
-                    	<h3 class="advisor">Steve Kim</h3>
+                    	<h3 class="advisor">Rick Yi</h3>
                         
                        	<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Major</span>
-							<span class="grid_3 omega info-desc">Materials Science Engineering</span>
+							<span class="grid_3 omega info-desc">Cognitive Science</span>
                        	</div>
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Hometown</span>
-							<span class="grid_3 omega info-desc">Castro Valley, CA</span>
+							<span class="grid_3 omega info-desc">Hawaii</span>
                        	</div>
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Likes</span>
@@ -57,15 +57,15 @@ get_header();
                        	</div>
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Special Traits</span>
-							<span class="grid_3 omega info-desc">Often mistaken for different ethnicities</span>
+							<span class="grid_3 omega info-desc">Awesomeness</span>
                        	</div>
                       
                             
-						<h3 class="advisor">Eunice Kim</h3>
+						<h3 class="advisor">Sue Yi</h3>
 						
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Major</span>
-							<span class="grid_3 omega info-desc">Mechanical Engineering</span>
+							<span class="grid_3 omega info-desc">Sociology</span>
                        	</div>
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Hometown</span>
@@ -77,7 +77,7 @@ get_header();
                        	</div>
 						<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Special Traits</span>
-							<span class="grid_3 omega info-desc">Good at story telling</span>
+							<span class="grid_3 omega info-desc">Sneezes real loud</span>
                        	</div>
                         
                     </div>
@@ -116,8 +116,8 @@ get_header();
 				    else {
 				        // form has been submitted
 			            $from = $_POST['your-name'] . '<' . $_POST['your-email'] . '>';
-                        $to = 'abeyang@gmail.com';
-                        $subject = 'message from a2f Riverside website';
+                        $to = 'michael.shuh@gmail.com';
+                        $subject = 'message from a2f Berkeley website';
                         $msg = $_POST['your-message'] . "\r\n\r\n" . 'Phone: ' . $_POST['your-phone'];
 
                     	date_default_timezone_set('America/Los_Angeles');   // Abe: is this necessary?

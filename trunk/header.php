@@ -107,7 +107,7 @@ $frontpage_title = 'Christian Fellowship @ UC Riverside';
                 </div>
         		<div id="navlinks">
             		<a href="<?php echo get_permalink( 2 ); ?>" class="grid_3 alpha"><span>&rarr;</span>learn more about us</a>
-            		<a href="<?php echo get_permalink(169); ?>" class="grid_3 alpha"><span>&rarr;</span>check out our past posts</a>        		  
+            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out our past posts</a>        		  
         		</div>
             </h2>
             
