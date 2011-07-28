@@ -598,13 +598,13 @@ ul.categories li.Featured a:hover,
 	background-position: -110px -60px;
 }
 
-ul.categories li.Upcoming a,
-#home ul.categories-sm li.Upcoming a span {
+ul.categories li.Announcements a,
+#home ul.categories-sm li.Announcements a span {
 	background-position: -90px -150px;
 }
 
-ul.categories li.Upcoming a:hover,
-#home ul.categories-sm li.Upcoming a:hover span {
+ul.categories li.Announcements a:hover,
+#home ul.categories-sm li.Announcements a:hover span {
 	background-position: -110px -150px;
 }
 
@@ -671,13 +671,13 @@ ul.categories-lg li.Featured a:hover,
 	background-position: -60px -60px;
 }
 
-ul.categories-lg li.Upcoming a,
-#archives ul.categories-lg li.Upcoming a span {
+ul.categories-lg li.Announcements a,
+#archives ul.categories-lg li.Announcements a span {
 	background-position: -30px -150px;
 }
 
-ul.categories-lg li.Upcoming a:hover,
-#archives ul.categories-lg li.Upcoming a:hover span {
+ul.categories-lg li.Announcements a:hover,
+#archives ul.categories-lg li.Announcements a:hover span {
 	background-position: -60px -150px;
 }
 
