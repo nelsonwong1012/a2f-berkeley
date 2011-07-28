@@ -20,15 +20,15 @@ require('wp-blog-header.php');
 
 // variables
 $groupname = 'acts2fellowship';
-$campus = 'Riverside';
-$websiteurl = 'http://acts2fellowship.org/riverside';
+$campus = 'Berkeley';
+$websiteurl = 'http://acts2fellowship.org/berkeley';
 
-$mainpostcat = 'Upcoming';				// cateogory name = UPCOMING
+$mainpostcat = 'Announcements';				// cateogory name = UPCOMING
 $sidepostcat = 'Memories';                       // category name = MEMORIES
 $recentsideposts = ($_GET['n']) ? $_GET['n'] : 2;		// number of most recent side posts
 
 
-$featured = news_post('Signup for Course 101 and Life Groups (Spring Quarter)', 'http://www.acts2fellowship.org/riverside/2011/03/16/sign-up-for-course-101-and-life-groups-for-spring-quarter/', 'http://farm3.static.flickr.com/2462/3888678212_211466ed0d_m.jpg');
+$featured = news_post('Signup for Summer Events (MYT / REV / Apoglogetics Training Camp)', 'http://www.acts2fellowship.org/riverside/2011/06/07/summer-plans/', 'http://farm3.static.flickr.com/2505/5755997809_1d80f1c6f5.jpg');
 
 $misc = "
 	<p>Remember to check out the <a href=\"$websiteurl\">$groupname $campus website</a> throughout the week for updated news. Feel free to comment there as well!</p>
