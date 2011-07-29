@@ -26,6 +26,7 @@ $frontpage_title = 'Christian Fellowship @ UC Riverside';
 <!-- These two lines call the css files essential for the 960 grid system - DO NOT REMOVE!! -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/960_24_col.css" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -33,7 +34,7 @@ $frontpage_title = 'Christian Fellowship @ UC Riverside';
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <!-- <script src="<?php bloginfo('stylesheet_directory'); ?>/js/function.js" type="text/javascript" charset="utf-8"></script> -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <!--
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/mwheelIntent.js" type="text/javascript" charset="utf-8"></script>
