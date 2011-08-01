@@ -1,5 +1,5 @@
 <?php
-$frontpage_title = 'Christian Fellowship @ UC Riverside';
+$frontpage_title = 'Christian Fellowship @ UC Berkeley';
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -102,7 +102,7 @@ $frontpage_title = 'Christian Fellowship @ UC Riverside';
         <div id="photo-sidebar" class="grid_3">
             <h2 class="header_section">
                 We are a <br /><!--predominantly
-                                <strong>Asian-American--> <strong>Christian group</strong> on the Riverside campus. We have fun together, take trips, ask the tough questions, and study the Bible.
+                                <strong>Asian-American--> <strong>Christian group</strong> on the Berkeley campus. We have fun together, take trips, ask the tough questions, and study the Bible.
                 <div style="height: 50px;">
                     &nbsp;
                 </div>
