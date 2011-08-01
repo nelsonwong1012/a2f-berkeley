@@ -1,24 +1,15 @@
 // Onload: Background Resize
 // Void the image src before binding onload (http://code.google.com/p/chromium/issues/detail?id=7731)
-background_image_src = $('#background-image').attr('src');
+/*background_image_src = $('#background-image').attr('src');
 $('#background-image').attr('src','');
 $('#background-image').bind("load", function() {
-	bgResize();
-	
-	// Reset the body background
-	$('body').css({backgroundColor: 'transparent'});	
+    bgResize();
+    
+    // Reset the body background
+    $('body').css({backgroundColor: 'transparent'});    
 }, false);
-$('#background-image').attr('src',background_image_src);
+$('#background-image').attr('src',background_image_src);*/
 
-
-// Onready
-$(document).ready(function() {
-	// Background Resize
-	bgResize();
-	$(window).resize(function() {
-		bgResize();
-	});
-});
 
 // Resize the background
 
@@ -44,3 +35,8 @@ var bgResize = function() {
 		left: newWidth > winWidth ? '-' + (newWidth - winWidth) / 2 + 'px' : 0
 	});
 }
+
+// Background Resize
+$(window).resize(bgResize);
+$(window).load(bgResize);
+//$(document).ready(bgResize);
