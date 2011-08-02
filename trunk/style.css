@@ -143,7 +143,7 @@ hr {
 /* HEADER */
 
 #header {  
-    background: url(images/header2.png) 40px -90px no-repeat;
+    background: url(images/header2.png) 50% -90px no-repeat;
 }
 #header h1, #header h2 { text-indent: -99999px; border: 0; }
 
@@ -499,10 +499,6 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 
 /* Begin Page
  * --------------------------------------------- */
-#page #header {
-    background-image: url(images/header-large.png);
-}
-
 #page #outer {
     background-image: url(images/content-large-bg.png);
 }
@@ -918,8 +914,8 @@ blockquote cite {
 
 #background-image {
     background-color: #222;
-    left: -9999px;
     position: fixed;
+    left: 0;
     top: 0;
     z-index: -1;
 }
