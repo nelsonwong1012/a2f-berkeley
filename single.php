@@ -34,13 +34,10 @@
 					<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 					
 					<?php // get flickr photo gallery, if it exists
-					$gallery = get_post_custom_values('gallery');
+					$gallery = getcustom( 'flickr_set' );
 					
 					if ($gallery) {
-				    ?>
-				        <a name="gallery">&nbsp;</a>
-					    <div id="flickrGallery" data-name="<?php echo $gallery[0]; ?>">&nbsp;</div>
-				    <?php
+				    		echo do_shortcode("[galleria set=$gallery api_key='a23348bd8833108550a80f5f984aa92c']");
 					}
 					?>	
 
