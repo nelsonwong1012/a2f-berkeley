@@ -39,4 +39,5 @@ var bgResize = function() {
 // Background Resize
 $(window).resize(bgResize);
 $(window).load(bgResize);
+bgResize();
 //$(document).ready(bgResize);
