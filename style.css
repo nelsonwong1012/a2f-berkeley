@@ -76,7 +76,7 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-    background: transparent url(images/content-bg-70.png) top center repeat-y;
+    background: transparent url(images/content-bg-80.png) top center repeat-y;
 }
 
 body, div, p, span, a, input, textarea { 
@@ -143,8 +143,12 @@ hr {
 /* HEADER */
 
 #header { 
-    margin: 40px 0 30px;
+    padding: 40px 0 30px;
     text-align: center;
+}
+
+#page #header {
+    
 }
 
 #header h1, #header h2 { text-indent: -99999px; border: 0; }
@@ -502,7 +506,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 /* Begin Page
  * --------------------------------------------- */
 #page #outer {
-    background-image: url(images/content-large-bg-70.png);
+    background-image: url(images/content-large-bg-80.png);
 }
 
 #page h2 {

@@ -83,11 +83,10 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <div id="outer">
 
     <?php if ($id == 'page') { ?>
-        <a href="<?php echo get_option('home'); ?>/">
-            <div id="header" class="header_section">
-        	    <h1><?php bloginfo('name'); ?></h1>
-            	<h2><?php bloginfo('description'); ?></h2>
-            </div>
+        
+            <h1 id="header">
+        	    <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" width="460" height="89" alt="<?php bloginfo('name'); ?>" /></a>
+            </h1>
         </a>
     <?php } //endif is_page ?>
 
@@ -111,7 +110,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         <div class="grid_10">
             <h1 id="header">
                 <a href="<?php echo get_option('home'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" alt="<?php bloginfo('name'); ?>" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" width="460" height="89" alt="<?php bloginfo('name'); ?>" />
                 </a>
             </h1>
       	<div id="content" class="grid_8 prefix_1 suffix_1 alpha">
