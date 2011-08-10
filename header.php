@@ -71,11 +71,11 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
     });
 </script> -->
 
-<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>	
+<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
 <!-- wp_head -->
 <?php 
     wp_deregister_script('jquery');
-    wp_head(); 
+    wp_head();
 ?>
 
 </head>
@@ -101,7 +101,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         		<div id="navlinks">
             		<a href="<?php echo get_permalink( 3158 ); ?>" class="grid_3 alpha"><span>&rarr;</span>learn more about us</a>
 			<a href="<?php echo get_permalink( 3250 ); ?>" class="grid_3 alpha"><span>&rarr;</span>get connected</a>
-            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out past posts</a>        		  
+            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out past posts</a>
         		</div>
             </h2>
             
@@ -109,10 +109,10 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         </div>
         <!-- main section -->
         <div class="grid_10">
-          <a href="<?php echo get_option('home'); ?>/"><div id="header" class="header_section">
-      		<h1>><?php bloginfo('name'); ?></h1>
-      		<h2><?php bloginfo('description'); ?></h2>
-          </div></a>
+            <h1 id="header">
+                <a href="<?php echo get_option('home'); ?>/">
+                    <img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" alt="<?php bloginfo('name'); ?>" />
+                </a>
+            </h1>
       	<div id="content" class="grid_8 prefix_1 suffix_1 alpha">
       <?php } //endif !is_page?>
-
