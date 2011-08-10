@@ -142,13 +142,11 @@ hr {
 
 /* HEADER */
 
-#header {  
-    background: url(images/header2.png) 50% -90px no-repeat;
+#header { 
+    margin: 40px 0 30px;
+    text-align: center;
 }
 
-.grid_10 #header {
-    background-position: 50px -90px;
-}
 #header h1, #header h2 { text-indent: -99999px; border: 0; }
 
 .header_section { height: 320px; }
@@ -504,7 +502,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 /* Begin Page
  * --------------------------------------------- */
 #page #outer {
-    background-image: url(images/content-large-bg.png);
+    background-image: url(images/content-large-bg-70.png);
 }
 
 #page h2 {
@@ -561,6 +559,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 }
 
 #archives .post-month {
+    margin-right: 3px;
 	font-size: 14px;
 }
 
@@ -919,6 +918,7 @@ blockquote cite {
 #background-image {
     background-color: #222;
     position: fixed;
+    width: 100%;
     left: 0;
     top: 0;
     z-index: -1;
@@ -929,7 +929,7 @@ blockquote cite {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #2C2F62;
+    background-color: #1B1E5C;
     opacity: 0.7;
     filter: alpha(opacity=70);
     z-index: -1;
