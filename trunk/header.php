@@ -41,7 +41,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.jscrollpane.min.js" type="text/javascript" charset="utf-8"></script>
 -->
 
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.simplemodal-1.4.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.simplemodal-1.4.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flickrGallery.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tipTip.js"></script>
 
@@ -69,7 +69,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
             });
         }
     });
-</script>
+</script> -->
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>	
 <!-- wp_head -->
@@ -85,35 +85,34 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
     <?php if ($id == 'page') { ?>
         <a href="<?php echo get_option('home'); ?>/">
             <div id="header" class="header_section">
-        	    <h1>><?php bloginfo('name'); ?></h1>
+        	    <h1><?php bloginfo('name'); ?></h1>
             	<h2><?php bloginfo('description'); ?></h2>
             </div>
         </a>
-    <? } //endif is_page ?>
+    <?php } //endif is_page ?>
+
 	<div id="wrapper" class="container_16 clearfix">
-	
-	<?php if ($id != 'page') { ?> 
+        <?php if ($id != 'page') { ?>
 	    <!-- left section -->
         <div id="photo-sidebar" class="grid_3">
             <h2 class="header_section">
                 We are a <br /><strong>Christian group</strong> on the Berkeley campus. We have fun together, take trips, ask the tough questions, and study the Bible.
                 <div style="height:40px;">&nbsp;</div>
         		<div id="navlinks">
-            		<a href="<?php echo get_permalink( 2 ); ?>" class="grid_3 alpha"><span>&rarr;</span>learn more about us</a>
-            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out our past posts</a>        		  
+            		<a href="<?php echo get_permalink( 3158 ); ?>" class="grid_3 alpha"><span>&rarr;</span>learn more about us</a>
+			<a href="<?php echo get_permalink( 3250 ); ?>" class="grid_3 alpha"><span>&rarr;</span>get connected</a>
+            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out past posts</a>        		  
         		</div>
             </h2>
             
             <?php echo sidebar_thumbnails() ?>
         </div>
-
         <!-- main section -->
         <div class="grid_10">
           <a href="<?php echo get_option('home'); ?>/"><div id="header" class="header_section">
       		<h1>><?php bloginfo('name'); ?></h1>
       		<h2><?php bloginfo('description'); ?></h2>
           </div></a>
-
       	<div id="content" class="grid_8 prefix_1 suffix_1 alpha">
-	
-	<? } //endif !is_page?>
+      <?php } //endif !is_page?>
+

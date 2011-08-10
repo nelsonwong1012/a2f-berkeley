@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ln -s $HOME/www/riverside/wp-content/themes/kairos-riverside/plugins/shortcodes.php $HOME/www/riverside/wp-content/plugins/shortcodes.php
-ln -s $HOME/www/riverside/wp-content/themes/kairos-riverside/plugins/gpphoto $HOME/www/riverside/wp-content/plugins/gpphoto
-ln -s $HOME/www/riverside/wp-content/themes/kairos-riverside/plugins/gpevent $HOME/www/riverside/wp-content/plugins/gpevent
+ln -s $HOME/www/berkeley/wp-content/themes/a2f-berkeley-2011/plugins/shortcodes.php $HOME/www/berkeley/wp-content/plugins/shortcodes.php
+ln -s $HOME/www/berkeley/wp-content/themes/a2f-berkeley-2011/plugins/gpphoto $HOME/www/berkeley/wp-content/plugins/gpphoto
+ln -s $HOME/www/berkeley/wp-content/themes/a2f-berkeley-2011/plugins/gpevent $HOME/www/berkeley/wp-content/plugins/gpevent
 

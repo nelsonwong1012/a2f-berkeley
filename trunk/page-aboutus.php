@@ -26,11 +26,12 @@ get_header();
                     	<h3>Looking for a church?</h3>
                         <p class="shortinfo"><?php outputcustom('church'); ?></p>
                     </div>
+	<!--
                     <div class="grid_5 omega">
                     	<h3>The Staff</h3>
                         <p class="shortinfo"><?php outputcustom('staff'); ?></p>
                     </div>
-
+	-->
                     <h3 class="grid_10 alpha">Our Alumni Advisors</h3>
                     <div class="grid_5 alpha">
 						<?php 
@@ -40,47 +41,49 @@ get_header();
 						<?php }?>
                     	<p><?php outputcustom('advisors'); ?></p>
                     </div>
+		<!--
                     <div class="grid_5 omega">
                     	<h3 class="advisor">Rick Yi</h3>
                         
                        	<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Major</span>
-							<span class="grid_3 omega info-desc">Cognitive Science</span>
+				<span class="grid_3 omega info-desc">Cognitive Science</span>
                        	</div>
-						<div class="info clearfix">
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Hometown</span>
-							<span class="grid_3 omega info-desc">Hawaii</span>
+				<span class="grid_3 omega info-desc">Hawaii</span>
                        	</div>
-						<div class="info clearfix">
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Likes</span>
-							<span class="grid_3 omega info-desc">Indian food</span>
+				<span class="grid_3 omega info-desc">Indian food</span>
                        	</div>
-						<div class="info clearfix">
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Special Traits</span>
-							<span class="grid_3 omega info-desc">Awesomeness</span>
+				<span class="grid_3 omega info-desc">Awesomeness</span>
                        	</div>
                       
                             
-						<h3 class="advisor">Sue Yi</h3>
-						
-						<div class="info clearfix">
+			<h3 class="advisor">Sue Yi</h3>
+					
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Major</span>
-							<span class="grid_3 omega info-desc">Sociology</span>
+				<span class="grid_3 omega info-desc">Sociology</span>
                        	</div>
-						<div class="info clearfix">
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Hometown</span>
-							<span class="grid_3 omega info-desc">West LA, CA</span>
+				<span class="grid_3 omega info-desc">West LA, CA</span>
                        	</div>
-						<div class="info clearfix">
-                       		<span class="grid_2 alpha info-label">Likes</span>
-							<span class="grid_3 omega info-desc">Dark chocolate, warm weather</span>
-                       	</div>
-						<div class="info clearfix">
+			<div class="info clearfix">
+				<span class="grid_2 alpha info-label">Likes</span>
+				<span class="grid_3 omega info-desc">Dark chocolate, warm weather</span>
+			</div>
+			<div class="info clearfix">
                        		<span class="grid_2 alpha info-label">Special Traits</span>
-							<span class="grid_3 omega info-desc">Sneezes real loud</span>
+				<span class="grid_3 omega info-desc">Sneezes real loud</span>
                        	</div>
                         
                     </div>
+-->
 				</div>
                 <div class="grid_6 omega">
                 	<h3 id="contact-header">Contact Us</h3>

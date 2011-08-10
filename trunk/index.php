@@ -40,14 +40,14 @@ get_header(); ?>
   				
 
   				<div class="entry clearfix grid_8 alpha">
-    						<?php
-                $thumbnail = get_post_custom_values('thumbnail');
-                $isupcoming = in_category('Upcoming') || in_category('Shorts');
-        			
-    						if ($thumbnail && !$isupcoming) {
-    							echo '<div class="photo large grid_12">' . linktoimage(resizeimage($thumbnail[0], ''), get_permalink()) . '</div>';
-    						}
-    						?>
+    				<?php
+                        $thumbnail = get_post_custom_values('thumbnail');
+                        $isupcoming = in_category('Upcoming') || in_category('Shorts');
+		
+                         if ($thumbnail && !$isupcoming) {
+                          echo '<div class="photo large grid_12">' . linktoimage(resizeimage($thumbnail[0], ''), get_permalink()) . '</div>';
+                         }
+    				?>
   				  <?php
 					if ($isupcoming)
 						the_content();
