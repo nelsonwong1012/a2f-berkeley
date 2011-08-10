@@ -260,7 +260,7 @@ if ($user_level > 2) {
     	$headers = "From: $from\r\n";
     	$headers .= "BCC: $bcc\r\n";
     	$headers .= "Content-Type: text/html";
-    	if ( mail('',$subject,$page_html,$headers) ) {
+    	if ( mail('nelsonwong@gmail.com'/*test emails*/,$subject,$page_html,$headers) ) {
     		echo "The email has been sent!";
     	} else {
     		echo "The email has failed!";

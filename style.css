@@ -145,6 +145,10 @@ hr {
 #header {  
     background: url(images/header2.png) 50% -90px no-repeat;
 }
+
+.grid_10 #header {
+    background-position: 50px -90px;
+}
 #header h1, #header h2 { text-indent: -99999px; border: 0; }
 
 .header_section { height: 320px; }
@@ -287,7 +291,7 @@ hr {
 }
 
 #sidebar .recent-post:hover {
-    left: 2px;
+    xxleft: 2px;
 }
 
 #sidebar .recent-post a {
@@ -369,14 +373,14 @@ ul.categories-lg li a { display: block; }
 	font-size: 11px;
 	line-height: 1.1;
 	font-style: italic;
-	color: #777;
+	color: #666;
 }
 
 .entry p { margin: 9px 0; }
 
 .entry ul { list-style-type: circle; list-style-position: inside; }
 
-.photo { overflow: hidden; margin: 0 0 10px 0; }
+.photo { overflow: hidden; margin: 0 0 20px 0; }
 .photo img, #sidebar img { height: auto; }
 .photo img { max-width: 460px; }
 #sidebar img { max-width: 160px; }
@@ -1626,4 +1630,9 @@ div.spch-bub-outside {
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 * html .jspCorner {
 	margin: 0 -3px 0 0;
+}
+
+.get-connected {
+	margin-left: 10px;
+	margin-right: 10px;
 }
