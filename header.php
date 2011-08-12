@@ -22,7 +22,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
             elseif (is_single()) $id = 'single';
 		} ?></title>
 
-<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico" />
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico?1" />
 
 <!-- These two lines call the css files essential for the 960 grid system - DO NOT REMOVE!! -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
@@ -33,7 +33,6 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<!-- <script src="<?php bloginfo('stylesheet_directory'); ?>/js/function.js" type="text/javascript" charset="utf-8"></script> -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <!--
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>

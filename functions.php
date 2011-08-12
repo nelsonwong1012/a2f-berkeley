@@ -13,7 +13,7 @@ function legacy_comments($file) {
 
 function gp_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
-    <li id="li-comment-<?php comment_ID() ?>" class="comment">
+    <li id="li-comment-<?php comment_ID() ?>" class="comment sadf sdf">
     <div id="comment-<?php comment_ID(); ?>">
     	<div>
     		<div class="comment-author vcard">
