@@ -53,8 +53,6 @@ if ( post_password_required() ) {
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<div id="the_form" class="grid_8 alpha">
 		<div class="grid_4 alpha">
-
-
 			<?php if ( $user_ID ) : ?>
 			Name <small>(<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">log out</a>)</small>
 			<br /><cite><?php echo $user_identity; ?></cite>
@@ -72,12 +70,11 @@ if ( post_password_required() ) {
 			
 			<?php endif; ?>
 			<!-- <p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p> -->
-			
 		</div>
 
 		<div class="grid_8 alpha">
 			<label for="comment">Comment</label>
-			<textarea name="comment" id="comment" class="grid_8 alpha" rows="10" tabindex="4"></textarea>
+			<textarea name="comment" id="comment" class="grid_8 alpha" rows="4" tabindex="4"></textarea>
 			
 			<div class="grid_8 alpha alignright">
 				<input name="submit" type="submit" id="submit" tabindex="5" value="Send Comment" />				

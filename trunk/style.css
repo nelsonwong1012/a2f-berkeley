@@ -247,7 +247,7 @@ hr {
 }
 
 #photo-sidebar img {
-    max-width: 160px;
+    max-width: 175px;
     opacity: 0.75;
 	filter:alpha(opacity=75);
 	
@@ -328,12 +328,12 @@ ul.categories li a {
 }
 
 #sidebar #get_recent_comments_wrap li a {
-	color: #9dc9db;
+	color: #BAD9E6;
 	font-size: 12px;
 	line-height: 1.2;
 }
-#sidebar #get_recent_comments_wrap li a:hover { color: #063461; }
-#sidebar #get_recent_comments_wrap li a:visited { color: #999; }
+#sidebar #get_recent_comments_wrap li a:hover { color: #002242; }
+#sidebar #get_recent_comments_wrap li a:visited { color: #aaa; }
 
 /* END SIDEBAR */
 
@@ -383,8 +383,8 @@ ul.categories-lg li a { display: block; }
 .photo img { max-width: 500px; }
 #sidebar img { max-width: 175px; }
 .post img, #sidebar img { height: auto; }
-.post img { max-width: 460px; }
-#sidebar img { max-width: 160px; }
+.post img { max-width: 500px; }
+#sidebar img { max-width: 175px; }
 
 table.dt { width: 100%; }
 .dt td { border: 1px solid #ccc; text-align: center }

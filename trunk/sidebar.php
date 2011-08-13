@@ -25,7 +25,7 @@
 		<?php
 
 		//The Query
-		query_posts('posts_per_page=5&cat=-6&offset=1'); //cat=-6 to exclude announcements, offset=1 to exclude most recent post
+		query_posts('posts_per_page=4&cat=-6&offset=1'); //cat=-6 to exclude announcements, offset=1 to exclude most recent post
 
 		//The Loop
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
