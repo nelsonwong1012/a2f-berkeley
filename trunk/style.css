@@ -379,6 +379,9 @@ ul.categories-lg li a { display: block; }
 .entry ul { list-style-type: circle; list-style-position: inside; }
 
 .photo { overflow: hidden; margin: 0 0 20px 0; }
+.photo img, #sidebar img { height: auto; }
+.photo img { max-width: 500px; }
+#sidebar img { max-width: 175px; }
 .post img, #sidebar img { height: auto; }
 .post img { max-width: 460px; }
 #sidebar img { max-width: 160px; }
