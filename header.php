@@ -24,7 +24,6 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico?1" />
 
-<!-- These two lines call the css files essential for the 960 grid system - DO NOT REMOVE!! -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/1040_16_col.css" />
 
@@ -42,9 +41,9 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 
 <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.simplemodal-1.4.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flickrGallery.js"></script>
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tipTip.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tipTip.js"></script> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
         $('.buttonrow').click(function() {
             $(this).next().slideDown();
@@ -53,14 +52,15 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         });
         
         $(function(){
-            $(".gcal-tip").tipTip({
+            console.log('gcal tiptip');
+            $('.gcal-tip').tipTip({
                 maxWidth: 500, 
                 defaultPosition: 'left', 
                 // keepAlive: true,
                 delay: 100
             });
         });
-
+        
         if ($('#flickrGallery')) {
             $('#flickrGallery').flickrGallery({
                  api_key: '3ffcc310a6c352bbd6ade08c6c2b7682',
@@ -102,6 +102,12 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
             		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out past posts</a>
         		</div>
             </h2>
+            
+            <ul id="left-sidebar-widgets">
+            	<?php
+            		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('left_sidebar_widget') ) : ?>
+            	<?php endif; ?>
+            </ul>
             
             <?php echo sidebar_thumbnails() ?>
         </div>

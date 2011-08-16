@@ -114,7 +114,27 @@ function outputcustom($name) {
 	echo $output;
 }
 
-if ( function_exists('register_sidebar') ) register_sidebar();
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' => 'left_sidebar_widget',
+        //'id' => 'top_sidebar',
+        'before_widget' => '<li>',
+        'after_widget' => '</li>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+}
+
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' => 'right_sidebar_widget',
+        //'id' => 'top_sidebar',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+}
     
 // for making the "read more" link to the post
 function new_excerpt_more($post) {

@@ -62,15 +62,11 @@
 		wp_reset_query();
 		?>
 		
-		<ul id="sidebar-widgets">
-			<?php 	
-				/* Widgetized sidebar, if you have the plugin installed. */
-				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-
-			
+		<ul id="right-sidebar-widgets">
+			<?php
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('right_sidebar_widget') ) : ?>
 			<?php endif; ?>
 		</ul>
-		
 	</div><!-- end #sidebar -->
 </div><!-- end #sidebar_wrapper -->
 <div class="clear">&nbsp;</div>
