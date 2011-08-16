@@ -140,6 +140,7 @@ get_header();
 			</div><!-- end entry -->
 			
 		</div><!-- end post -->
+		</div class="clear"></div>
 		
 		<?php endwhile; endif; ?>
 	</div>	
