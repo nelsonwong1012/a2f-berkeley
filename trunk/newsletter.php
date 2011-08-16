@@ -28,7 +28,7 @@ $sidepostcat = 'Memories';                       // category name = MEMORIES
 $recentsideposts = ($_GET['n']) ? $_GET['n'] : 2;		// number of most recent side posts
 
 
-$featured = news_post('Signup for Summer Events (MYT / REV / Apoglogetics Training Camp)', 'http://www.acts2fellowship.org/riverside/2011/06/07/summer-plans/', 'http://farm3.static.flickr.com/2505/5755997809_1d80f1c6f5.jpg');
+$featured = ""; //news_post('Signup for Summer Events (MYT / REV / Apoglogetics Training Camp)', 'http://www.acts4fellowship.org/riverside/2011/06/07/summer-plans/', 'http://farm3.static.flickr.com/2505/5755997809_1d80f1c6f5.jpg');
 
 $misc = "
 	<p>Remember to check out the <a href=\"$websiteurl\">$groupname $campus website</a> throughout the week for updated news. Feel free to comment there as well!</p>
@@ -39,7 +39,8 @@ $css = array(
 	'body' => 'background-color: #fff; margin: 0; padding: 0; font-family: Helvetica, Arial; color: #333333;',
 	'table' => 'font-size: 12px; line-height: 14px;',
 	'td' => 'font-family: Helvetica, Arial; color: #333333;',
-	'header' => 'background-color: #0057a4; margin-bottom: 15px;',
+	'header' => 'background-color: #0D469C; margin-bottom: 15px;',
+	'logo-td' => 'text-align: center; padding: 5px 0;',
 	'h1' => 'font-family: Georgia; color: #ffffff; padding: 10px 5px 0;',
 	'h2' => 'line-height: 18px;',
 	'h3' => 'font-size: 18px; font-weight: normal; color: #000000; text-transform: uppercase; margin: 0 0 8px 0; border-top: 1px solid #000000; border-bottom: 1px solid #dddddd; padding: 10px 0;',
@@ -164,8 +165,10 @@ $page_html="
                   
                   <table width=\"760\" height=\"50\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
                      <tr>
-                        <td ".style('td').">
-                        	<h1 ".style('h1').">$groupname $campus Newsletter</h1>
+                        <td ".style('logo-td').">
+                            <a href=\"http://www.acts2fellowship.org/berkeley/\" title=\"Acts2fellowship Website\">
+				                <img src=\"http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/a2f-logo-2011.png\" width=\"460\" height=\"89\" alt=\"Acts2fellowship | UC Berkeley Christian Fellowship\" />
+				            </a>
                         </td>
                      </tr>
                   </table>
@@ -198,8 +201,8 @@ $page_html="
                      <tr>
                         <td align=\"left\" ".style('td').">
 
-                           	<h3 ".style('h3').">Featured</h3>
-    						".parse($featured)."
+				".(!$featured? "" :
+					       "<h3 ".style('h3').">Featured</h3> ".parse($featured))."
 
 							<h3 ".style('h3').">Recent Posts</h3>
 							
@@ -241,9 +244,10 @@ if ($user_level > 2) {
                 <form method="post">
                 <table id="console" width="760" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                       <td width="25%">From <br/><input type="email" name="from" style="width: 180px;" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname . ' <'. $current_user->user_email . '>' ?>" /></td>
+                       <td width="25%">From <br/><input type="text" name="from" style="width: 182px;" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname . ' <'. $current_user->user_email . '>' ?>" /></td>
+                       <td width="25%">To <br /><input type="email" name="to" style="width: 180px;" value="newsletter@acts2fellowship.org" /></td>
                        <td width="25%">BCC <br /><input type="email" name="bcc" style="width: 180px;" value="" /></td>
-                       <td width="50%">Subject <br /><input type="text" name="subject" style="width: 280px;" value="<?php echo $title ?>" />
+                       <td width="25%">Subject <br /><input type="text" name="subject" style="width: 180px;" value="<?php echo $title ?>" />
                            <input type="submit" name="send_email" value="Send Email" /></td>
                     </tr>
                 </table>
@@ -253,6 +257,7 @@ if ($user_level > 2) {
     else {
         // form has been submitted
         $from = $_POST['from'];
+        $to = $_POST['to'];
         $bcc = $_POST['bcc'];
         $subject = $_POST['subject'];
 
@@ -260,7 +265,7 @@ if ($user_level > 2) {
     	$headers = "From: $from\r\n";
     	$headers .= "BCC: $bcc\r\n";
     	$headers .= "Content-Type: text/html";
-    	if ( mail('nelsonwong@gmail.com'/*test emails*/,$subject,$page_html,$headers) ) {
+    	if ( mail($to,$subject,$page_html,$headers) ) {
     		echo "The email has been sent!";
     	} else {
     		echo "The email has failed!";
