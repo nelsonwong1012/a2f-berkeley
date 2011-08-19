@@ -122,14 +122,14 @@ h4, h4 a { font-family: LeagueGothicRegular, verdana; font-size: 18px; line-heig
 a {
     text-decoration: none;
     color: #d43735;
-    -webkit-transition: color 0.3s ease-in-out;
-	-moz-transition: color 0.3s ease-in-out;
-	-o-transition: color 0.3s ease-in-out;
-	transition: color 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 a:hover { color: #ff9c00; }
 
-small { color: #999; }
+small { color: #888; }
 
 hr {
 	height: 4px;
@@ -144,7 +144,7 @@ hr {
 /* HEADER */
 
 #header {
-    padding: 40px 0 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -223,7 +223,20 @@ hr {
 	overflow: hidden;
 }
 
-/* PHOTO SIDEBAR */
+/* LEFT SIDEBAR */
+
+#photo-sidebar #facebook-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+#photo-sidebar #facebook-link:hover {
+    opacity: .75;
+	filter:alpha(opacity=75);
+}
+
 #photo-sidebar { overflow: hidden; }
 
 #photo-sidebar h2.header_section { margin-top: 30px; height: 260px; }
@@ -254,9 +267,16 @@ hr {
 
 #photo-sidebar img {
     max-width: 175px;
+}
+
+#photo-sidebar a {
     opacity: 0.75;
 	filter:alpha(opacity=75);
-	
+}
+
+#photo-sidebar a:hover {
+    opacity: 1;
+	filter:alpha(opacity=100);
 }
 
 /* RIGHT SIDEBAR */
@@ -285,33 +305,24 @@ hr {
 }
 
 #sidebar .recent-post {
-    position: relative;
+    display: block;
 	clear: both;
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
 }
 
 #sidebar .recent-post:hover {
-    xxleft: 2px;
+    margin: -2px 0 2px;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
 }
 
-#sidebar .recent-post a {
-    display: block;
-}
-
-#sidebar .cats-comments-bar {
+/*#sidebar .cats-comments-bar {*/
+#sidebar .recent-post .comments {
     position: relative;
     bottom: 25px;
     padding: 0 3px;
 }
 
-ul.categories {
-	float: left;
-}
-
+ul.categories,
 ul.categories li {
 	float: left;
 }
@@ -327,19 +338,24 @@ ul.categories li a {
 #sidebar .textwidget { margin-bottom: 15px; }
 #sidebar .textwidget, #sidebar .textwidget p, #sidebar .textwidget a { font-size: 12px; line-height: 1.2; }
 
-#sidebar #get_recent_comments_wrap li {
+#get_recent_comments_wrap li {
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #468bb2;
 }
 
-#sidebar #get_recent_comments_wrap li a {
+#get_recent_comments_wrap li a {
 	color: #BAD9E6;
 	font-size: 12px;
 	line-height: 1.2;
 }
-#sidebar #get_recent_comments_wrap li a:hover { color: #002242; }
-#sidebar #get_recent_comments_wrap li a:visited { color: #aaa; }
+
+#get_recent_comments_wrap li a span {
+    color: #BAD9E6;
+}
+
+#get_recent_comments_wrap li a:hover { color: #7AABBF; }
+#get_recent_comments_wrap li a:visited { color: #aaa; }
 
 /* END SIDEBAR */
 
@@ -666,6 +682,10 @@ ul.categories-lg li a,
 	height: 24px;
 	border: none;
 	background: url(images/kairos-icons.png) -30px -238px no-repeat;
+	-webkit-transition: none;
+	   -moz-transition: none;
+	     -o-transition: none;
+	        transition: none;
 }
 
 ul.categories-lg li a:hover,
@@ -969,7 +989,7 @@ blockquote cite {
 	font-size: 18px;
 	font-style: italic;
 	color: #666;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 #about_us #hero	{
 	max-width: 580px;
@@ -1006,7 +1026,7 @@ blockquote cite {
 }
 
 #about_us #form { margin-top: 20px; }
-#about_us #form input[type=text], #about_us #form textarea { width: 332px; } /* .grid_4 w/ padding+border  */ 
+#about_us #form input[type=text], #about_us #form textarea { width: 100%; } /* .grid_4 w/ padding+border  */ 
 #about_us #form input[type=submit] { float: right; }
 
 
@@ -1027,10 +1047,10 @@ blockquote cite {
     background-color: #666;
     color: #fff;
     opacity: 0.75;
-    -webkit-transition: opaciy 0.3s ease-in-out;
-	-moz-transition: opaciy 0.3s ease-in-out;
-	-o-transition: opaciy 0.3s ease-in-out;
-	transition: opaciy 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 .button:hover {
     cursor: pointer;
