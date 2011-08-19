@@ -84,7 +84,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
     <?php if ($id == 'page') { ?>
         
             <h1 id="header">
-        	    <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" width="460" height="89" alt="<?php bloginfo('name'); ?>" /></a>
+        	    <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="232" alt="<?php bloginfo('name'); ?>" /></a>
             </h1>
         </a>
     <?php } //endif is_page ?>
@@ -103,6 +103,10 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         		</div>
             </h2>
             
+            <a href="http://www.facebook.com/acts2fellowship" id="facebook-link" target="_blank">
+                <img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/5154716553_73f45a3f00_o.png" alt="Visit us on Facebook!" />
+            </a>
+            
             <ul id="left-sidebar-widgets">
             	<?php
             		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('left_sidebar_widget') ) : ?>
@@ -115,7 +119,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         <div class="grid_10">
             <h1 id="header">
                 <a href="<?php echo get_option('home'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/images/a2f-logo-2011.png" width="460" height="89" alt="<?php bloginfo('name'); ?>" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="232" alt="<?php bloginfo('name'); ?>" />
                 </a>
             </h1>
       	<div id="content" class="grid_8 prefix_1 suffix_1 alpha">
