@@ -26,6 +26,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/1040_16_col.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.countdown.css" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -33,6 +34,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.countdown.min.js"></script> -->
 <!--
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/mwheelIntent.js" type="text/javascript" charset="utf-8"></script>
@@ -107,13 +109,30 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
                 <img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/5154716553_73f45a3f00_o.png" alt="Visit us on Facebook!" />
             </a>
             
+            <!-- <a id="nswn-countdown-wrapper" href="http://www.newstudentwelcomenight.com/" target="_blank">
+                <h3>NSWN Countdown!</h3>
+                <div id="nswn-countdown"></div>
+            </a>
+            
+            <script type="text/javascript" charset="utf-8">
+                $(function () {
+                    var nswn = new Date(2011, 7, 25);
+                    nswn.setHours(17, 00);
+                    $('#nswn-countdown').countdown({
+                        until: nswn,
+                        labels: ['Years', 'Months', 'Weeks', 'Days', 'Hrs', 'Mins', 'Secs'],
+                        labels1: ['Year', 'Month', 'Week', 'Day', 'Hr', 'Min', 'Sec']
+                    });
+                });
+            </script> -->
+            
             <ul id="left-sidebar-widgets">
             	<?php
             		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('left_sidebar_widget') ) : ?>
             	<?php endif; ?>
             </ul>
             
-            <?php echo sidebar_thumbnails() ?>
+            <?php #echo sidebar_thumbnails() ?>
         </div>
         <!-- main section -->
         <div class="grid_10">

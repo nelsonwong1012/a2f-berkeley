@@ -77,7 +77,7 @@ body {
 	padding: 0;
 	width: 100%;
 	min-width: 1080px;
-    background: transparent url(images/content-bg-80.png) top center repeat-y;
+    background: transparent url(images/content-bg-65.png) top center repeat-y;
 }
 
 body, div, p, span, a, input, textarea {
@@ -239,7 +239,7 @@ hr {
 
 #photo-sidebar { overflow: hidden; }
 
-#photo-sidebar h2.header_section { margin-top: 30px; height: 260px; }
+#photo-sidebar h2.header_section { margin-top: 30px; height: 280px; }
 
 #photo-sidebar h2.header_section, #photo-sidebar h2.header_section a {
     font-size: 18px;
@@ -256,9 +256,17 @@ hr {
     border-top: 1px solid #175683;
     padding-top: 10px;
 }
+
+#photo-sidebar h2.header_section #navlinks a {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
 #photo-sidebar h2.header_section a {
     color: #063461;
     color: #eee;
+    opacity: 1;
+	filter:alpha(opacity=100);
 }
 #photo-sidebar h2.header_section a:hover { color: #ff9c00; text-shadow: none; }
 #photo-sidebar h2.header_section a span {
@@ -269,15 +277,15 @@ hr {
     max-width: 175px;
 }
 
-#photo-sidebar a {
+/*#photo-sidebar a {
     opacity: 0.75;
-	filter:alpha(opacity=75);
+    filter:alpha(opacity=75);
 }
 
 #photo-sidebar a:hover {
     opacity: 1;
-	filter:alpha(opacity=100);
-}
+    filter:alpha(opacity=100);
+}*/
 
 /* RIGHT SIDEBAR */
 #sidebar_wrapper { padding-top: 40px; }
@@ -307,6 +315,11 @@ hr {
 #sidebar .recent-post {
     display: block;
 	clear: both;
+    -webkit-transition: all 0.2s ease-out;  
+       -moz-transition: all 0.2s ease-out;  
+        -ms-transition: all 0.2s ease-out;  
+         -o-transition: all 0.2s ease-out;  
+            transition: all 0.2s ease-out;  
 }
 
 #sidebar .recent-post:hover {
@@ -314,6 +327,13 @@ hr {
     opacity: 0.75;
     filter: alpha(opacity=75);
 }
+
+
+#right-sidebar-widgets {
+    color: #888;
+}
+
+
 
 /*#sidebar .cats-comments-bar {*/
 #sidebar .recent-post .comments {
@@ -338,14 +358,18 @@ ul.categories li a {
 #sidebar .textwidget { margin-bottom: 15px; }
 #sidebar .textwidget, #sidebar .textwidget p, #sidebar .textwidget a { font-size: 12px; line-height: 1.2; }
 
+#get_recent_comments_wrap {
+    margin-bottom: 40px;
+}
+
 #get_recent_comments_wrap li {
 	padding-bottom: 10px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid #468bb2;
+	border-bottom: 1px dotted #2B76A1;
 }
 
 #get_recent_comments_wrap li a {
-	color: #BAD9E6;
+	color: #9AC8DB;
 	font-size: 12px;
 	line-height: 1.2;
 }
@@ -390,12 +414,14 @@ ul.categories-lg li a { display: block; }
 
 .entry .caption,
 .entry .wp-caption-text {
-    margin: none;
+    display: block;
+    margin: 2px 0 0;
 	font-family: georgia, serif;
 	font-size: 12px;
 	line-height: 1.1;
 	font-style: italic;
-	color: #666;
+	color: #555;
+	text-align: center;
 }
 
 .entry p { margin: 9px 0; }
@@ -408,6 +434,24 @@ ul.categories-lg li a { display: block; }
 #sidebar img { max-width: 175px; }
 .post img, #sidebar img { height: auto; }
 .post img { max-width: 500px; }
+.post a > img {
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
+.post a:hover > img {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.post .aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #sidebar img { max-width: 175px; }
 
 table.dt { width: 100%; }
@@ -461,7 +505,11 @@ table.dt { width: 100%; }
 	font-size: 14px;
 }
 a.read-more { background: url(images/readmore.png) left center no-repeat; }
-a.read-more span { padding-left: 29px; color: #ff9c00; }
+
+a.read-more span {
+    padding-left: 29px;
+    color: red;
+}
 
 /* Begin Nav
  * --------------------------------------------- */
@@ -529,7 +577,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 /* Begin Page
  * --------------------------------------------- */
 #page #outer {
-    background-image: url(images/content-large-bg-80.png);
+    background-image: url(images/content-large-bg-70.png);
 }
 
 #page h2 {
@@ -542,7 +590,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 #archives h4 { overflow: hidden; height: 18px; } 
 #archives h4 a { color: #d43735; }
 #archives .post { height: 256px; overflow: hidden; margin-bottom: 20px; }
-#archives img { width: 220px; height: auto; margin-bottom: 4px; }
+#archives img { max-width: 240px; height: auto; margin-bottom: 4px; }
 #archives .small p { font-size: 12px; line-height: 1.2; }
 
 #archives .cats-comments-bar { margin-bottom: 5px; }
@@ -562,7 +610,7 @@ a.read-more span { padding-left: 29px; color: #ff9c00; }
 	height: auto;
 	background: none;
 	font-size: 18px;
-	color: #aaa;
+	color: #999;
 }
 
 #archives ul.categories-lg li a:hover {
@@ -1115,7 +1163,7 @@ blockquote cite {
 	font-family: georgia;
 	font-size: 11px;
 	font-style: italic;
-	color: #999;
+	color: #aaa;
 }
 
 .gcal-widget-event { margin-left: 40px; padding-top: 5px; z-index: 10; }
