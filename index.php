@@ -7,9 +7,9 @@ get_header(); ?>
 	            <?php //calculate age of post (in days)
                           $post_age_in_days = (time('U') - get_the_time('U'))/(60*60*24); ?>
 		    <?php //filter week-old announcements
-		          if ($post_age_in_days > 7.0 && in_category(6)) :
-                              continue; 
-                          endif; ?>
+		          #if ($post_age_in_days > 7.0 && in_category(6)) :
+                          #    continue; 
+                          #endif; ?>
   			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
   				<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
   				

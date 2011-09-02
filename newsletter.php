@@ -26,7 +26,18 @@ $websiteurl = 'http://acts2fellowship.org/berkeley';
 $mainpostcat = 'Announcements';				// cateogory name = UPCOMING
 $sidepostcat = 'Memories';                       // category name = MEMORIES
 $recentsideposts = ($_GET['n']) ? $_GET['n'] : 2;		// number of most recent side posts
+$post1 = $_POST['post-1'];
+$post2 = $_POST['post-2'];
+$post3 = $_POST['post-3'];
+if (!$post1 && !$post2 && !$post3) {
+	query_posts(array('category_name' => $mainpostcat, 'showposts' => 1));
+	if (have_posts()) : while (have_posts()) : the_post(); 
+		$post1 = $post->post_name;
+	endwhile; 
+	endif; 
+}
 
+wp_reset_query();
 
 $featured = ""; //news_post('Signup for Summer Events (MYT / REV / Apoglogetics Training Camp)', 'http://www.acts4fellowship.org/riverside/2011/06/07/summer-plans/', 'http://farm3.static.flickr.com/2505/5755997809_1d80f1c6f5.jpg');
 
@@ -91,19 +102,26 @@ function news_post($title, $link, $thumb = '') {
 }
 
 // render: main post
-query_posts('category_name='.$mainpostcat.'&showposts=1');
-if (have_posts()) : while (have_posts()) : the_post(); 
-	$title = get_the_title();
-	$content = '<h2>' . linkto($title, get_permalink()) . '</h2>';
-	$content .= get_the_content();
-	
-	// parsing time
-	$content = parse($content);
-endwhile; 
-else : 
-	$title = 'acts2fellowship newsletter';
-	$content = 'No post found';
-endif; 
+$content = '';
+$post_slugs = array($post1, $post2, $post3);
+foreach ($post_slugs as $slug) {
+	if (!$slug) continue;
+	query_posts(array('name' => $slug));
+	if (have_posts()) : while (have_posts()) : the_post(); 
+		$title = get_the_title();
+		$content .= '<h2>' . linkto($title, get_permalink()) . '</h2>';
+		$content .= get_the_content();
+		
+		// parsing time
+		$content = parse($content);
+	endwhile; 
+	else : 
+		$title = 'acts2fellowship newsletter';
+		$content .= 'failed to find post: '.$slug;
+	endif; 
+}
+
+wp_reset_query();
 
 // render: side posts
 $sidecontent = '';
@@ -116,6 +134,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 	
 endwhile; 
 endif;
+
+wp_reset_query();
 
 if ($sidecontent) {
 	$sidecontent = parse($sidecontent);
@@ -142,14 +162,14 @@ $page_html="
 	
 	<style>
 	   .FacebookLikeButton { display: none; }
-	   #console input[type=\"text\"], #console input[type=\"email\"] { 
+	   .console input[type=\"text\"], .console input[type=\"email\"] { 
 	       background: transparent; 
 	       border: none;
 	       border-bottom: 1px dotted #999; 
 	       font-size: 13px;
 	       color: #eee;
        }
-	   #console td { font-size: 11px; color: #666; }
+	   .console td { font-size: 11px; color: #666; }
 	</style>
 
 </head>
@@ -239,16 +259,25 @@ $page_html="
 if ($user_level > 2) {
     // logged in & has the right priviledges
     if (!isset($submitted)) {
-        // form has NOT been submitted yet
 ?>
                 <form method="post">
-                <table id="console" width="760" border="0" cellspacing="0" cellpadding="0">
+                <table class="console" width="1040" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                       <td width="25%">From <br/><input type="text" name="from" style="width: 182px;" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname . ' <'. $current_user->user_email . '>' ?>" /></td>
-                       <td width="25%">To <br /><input type="email" name="to" style="width: 180px;" value="newsletter@acts2fellowship.org" /></td>
-                       <td width="25%">BCC <br /><input type="email" name="bcc" style="width: 180px;" value="" /></td>
-                       <td width="25%">Subject <br /><input type="text" name="subject" style="width: 180px;" value="<?php echo $title ?>" />
-                           <input type="submit" name="send_email" value="Send Email" /></td>
+                       <td width="20%">From <br/><input type="text" name="from" style="width: 190px;" value="<?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname . ' <'. $current_user->user_email . '>' ?>" /></td>
+                       <td width="20%">To <br /><input type="email" name="to" style="width: 190px;" value="newsletter@acts2fellowship.org" /></td>
+                       <td width="20%">BCC <br /><input type="email" name="bcc" style="width: 190px;" value="" /></td>
+                       <td width="20%">Subject <br /><input type="text" name="subject" style="width: 190px;" value="<?php echo $title ?>" /></td>
+                       <td width="20%"><input type="submit" name="send_email" value="Send Email" /></td>
+                    </tr>
+                </table>
+
+		To add posts, copy the post name(from the url of a post, also referred to as the "slug") and click Load Posts
+                <table class="console" width="1040" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                       <td width="30%">Post 1:<br/><input type="text" name="post-1" style="width: 290px;" value="<?php echo $post1; ?>" /></td>
+                       <td width="30%">Post 2:<br/><input type="text" name="post-2" style="width: 290px;" value="<?php echo $post2; ?>" /></td>
+                       <td width="30%">Post 3:<br/><input type="text" name="post-3" style="width: 290px;" value="<?php echo $post3; ?>" /></td>
+                       <td width="10%"><input type="submit" name="load_posts" value="Load Posts" /></td>
                     </tr>
                 </table>
                 </form>
