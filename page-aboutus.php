@@ -1,8 +1,8 @@
 <?php
-/*
-Template Name: AboutUs
-*/
-get_header();
+    /*
+    Template Name: AboutUs
+    */
+    get_header();
 ?>
 
     <div><h2 class="grid_14 prefix_1"><?php the_title(); ?></h2></div>
@@ -13,13 +13,16 @@ get_header();
     			<div class="page">
 
     				<p class="subtitle grid_14 alpha"><?php outputcustom('subtitle'); ?></p>
-            
-                	<div class="grid_8 alpha">
-    					<?php 
+    				
+    				<?php 
     					$main_img = getcustom('main_img');
     					if ($main_img) { ?>
-                    	<img id="hero" src="<?php echo $main_img; ?>"/>
-    					<?php }?>
+                    	<img id="hero" src="<?php echo $main_img; ?>" />
+					<?php }?>
+					
+					<div class="clear"></div>
+            
+                	<div class="grid_8 alpha">
                     	<p><?php outputcustom('main'); ?></p>
                     
                     	<div class="grid_4 alpha">
