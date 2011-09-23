@@ -15,7 +15,7 @@
 	        $gcal = new gCalWeb($cal, array(
                 'debug' => 0,
       	        	'shows' => 'normal',
-              		'numdays' => 7
+              		'numdays' => 6
                ));
 
        		echo $gcal->widgetDisplay_steel();
@@ -25,7 +25,7 @@
 		<?php
 
 		//The Query
-		query_posts('posts_per_page=5&cat=-6&offset=1&ignore_sticky_posts=1'); //cat=-6 to exclude announcements, offset=1 to exclude most recent post, ignore_sticky_post=1 to not show sticky posts
+		query_posts('posts_per_page=6&cat=-6&offset=1&ignore_sticky_posts=1'); //cat=-6 to exclude announcements, offset=1 to exclude most recent post, ignore_sticky_post=1 to not show sticky posts
 
 		//The Loop
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
