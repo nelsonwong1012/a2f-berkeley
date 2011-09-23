@@ -207,8 +207,21 @@ $page_html="
                            
                            <h3 ".style('h3').">Upcoming</h3>
                            
-                           $content
-                            
+                             <h2><a style=\"color: #ff9c00; text-decoration: none;\" href=\"http://www.acts2fellowship.org/berkeley/tfn2-the-friday-night2\">The Friday Night #2</a></h2>
+                             <p>Join us for a night of music, videos, laughter, and an engaging talk!<p>
+                             <a href=\"http://www.acts2fellowship.org/berkeley/tfn2-the-friday-night2\">
+                               <img src=\"http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/09/TFN2.jpg\" alt=\"\" title=\"TFN2\" width=\"500\" height=\"281\" class=\"aligncenter size-full wp-image-3647\" />
+                             </a>
+
+                             <h2><a style=\"color: #ff9c00; text-decoration: none;\" href=\"http://www.acts2fellowship.org/berkeley/get-connected\">Life Groups</a></h2>
+                             <p>We'll have life groups again this week! Not sure where you're meeting? Shoot a quick email to your lead or <a href=\"mailto:dkinder.is.me@gmail.com\">myself</a>.</p>
+
+                             <h2><a style=\"color: #ff9c00; text-decoration: none;\" href=\"http://www.acts2fellowship.org/berkeley/hotspots/\">HOT Spots</a></h2>
+                             <p>HOT means Hang Out Time so take a study break and join us for some food and fun every week!<p>
+                             <a href=\"http://www.acts2fellowship.org/berkeley/hotspots/\">
+                               <img src=\"http://farm7.static.flickr.com/6183/6093744964_517c3521e4.jpg\" />
+                             </a>
+
                         </td>
                      </tr>
                   </table>
@@ -231,7 +244,7 @@ $page_html="
                            
                            	<h3 ".style('h3').">Etcetera</h3>
                                   <a href=\"http://www.facebook.com/acts2fellowship\"><img style=\"margin: 9px 0px 3px 0px\" src=\"http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/find-us-on-facebook.png\" /></a>
-							".parse($misc)."
+                                  ".parse($misc)."
                            
                         </td>
                      </tr>
