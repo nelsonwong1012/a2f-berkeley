@@ -225,14 +225,14 @@ hr {
 
 /* LEFT SIDEBAR */
 
-#photo-sidebar #facebook-link {
+#photo-sidebar .featured-sidebar-button {
     display: inline-block;
     margin-bottom: 30px;
     opacity: 1;
 	filter:alpha(opacity=100);
 }
 
-#photo-sidebar #facebook-link:hover {
+#photo-sidebar .featured-sidebar-button:hover {
     opacity: .75;
 	filter:alpha(opacity=75);
 }
