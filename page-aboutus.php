@@ -25,17 +25,18 @@
                 	<div class="grid_8 alpha">
                     	<p><?php outputcustom('main'); ?></p>
                     
-                    	<div class="grid_4 alpha">
-                        	<h3>Looking for a church?</h3>
-                            <p class="shortinfo"><?php outputcustom('church'); ?></p>
+                        <div class="grid_8 alpha">
+                        	<h3>The Council</h3>
+				<div>
+				<?php 
+				$council_img = getcustom('council_img'); 
+				if ($council_img) { ?>
+					<img src="<?php echo $council_img; ?>"/>
+				<?php }?>
+				    <p class="shortinfo"><?php outputcustom('council'); ?></p>
+				</div>
                         </div>
-    	<!--
-                        <div class="grid_5 omega">
-                        	<h3>The Staff</h3>
-                            <p class="shortinfo"><?php outputcustom('staff'); ?></p>
-                        </div>
-    	-->
-    	                <div class="grid_4 omega">
+    	                <div class="grid_4 alpha">
                             <h3>Our Alumni Advisors</h3>
                             <div>
         						<?php 
@@ -45,6 +46,10 @@
         						<?php }?>
                             	<p><?php outputcustom('advisors'); ?></p>
                             </div>
+                        </div>
+                    	<div class="grid_4 omega">
+                        	<h3>Looking for a church?</h3>
+                            <p class="shortinfo"><?php outputcustom('church'); ?></p>
                         </div>
     		<!--
                         <div class="grid_5 omega">
