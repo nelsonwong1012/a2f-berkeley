@@ -105,10 +105,22 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         		</div>
             </h2>
             
-            <a href="http://www.facebook.com/acts2fellowship" id="facebook-link" target="_blank">
+            <a href="http://www.facebook.com/acts2fellowship" class="featured-sidebar-button" target="_blank">
                 <img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/5154716553_73f45a3f00_o.png" alt="Visit us on Facebook!" />
             </a>
+
+            <a href="/berkeley/office-hours" class="featured-sidebar-button" target="_blank">
+                <img src="http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/office-hours-button.png" alt="Come pay us a visit!" />
+            </a>
+
+            <!--<a href="/berkeley/thrive" class="featured-sidebar-button" target="_blank">
+                <img src="http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/Thrive_web_button.jpg" alt="Thrive!" />
+            </a>-->
             
+            <!-- <a href="" class="featured-sidebar-button" target="_blank">
+                <img src="http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/tabling-signup.jpg" alt="Signup!" />
+            </a> -->
+
             <!-- <a id="nswn-countdown-wrapper" href="http://www.newstudentwelcomenight.com/" target="_blank">
                 <h3>NSWN Countdown!</h3>
                 <div id="nswn-countdown"></div>
