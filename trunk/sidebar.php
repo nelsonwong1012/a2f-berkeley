@@ -8,7 +8,6 @@
 <div id="sidebar_wrapper">
 	
 	<div id="sidebar" class="grid_3">
-		
         <?php
 		require('php/gcal/gcalweb.class.php');
         	$cal = 'a2f';
@@ -20,7 +19,6 @@
 
        		echo $gcal->widgetDisplay_steel();
         ?>
-		
 		<h3>Recent Posts</h3>
 		<?php
 

@@ -22,7 +22,7 @@ require('wp-blog-header.php');
 $groupname = 'acts2fellowship';
 $campus = 'Berkeley';
 $websiteurl = 'http://acts2fellowship.org/berkeley';
-$unsubscribe_contact = 'hartiechang@gmail.com';
+$unsubscribe_contact = 'info@acts2fellowship.org';
 
 $mainpostcat = 'Announcements';				// cateogory name = UPCOMING
 $sidepostcat = 'Memories';                       // category name = MEMORIES

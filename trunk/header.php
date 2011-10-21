@@ -26,7 +26,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/1040_16_col.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.countdown.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/tipTip.css" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -42,8 +42,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 -->
 
 <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.simplemodal-1.4.js"></script>
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flickrGallery.js"></script>
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tipTip.js"></script> -->
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.flickrGallery.js"></script> -->
 
 <!-- <script type="text/javascript">
     $(document).ready(function(){
@@ -96,22 +95,25 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 	    <!-- left section -->
         <div id="photo-sidebar" class="grid_3">
             <h2 class="header_section">
-                We are a <br /><strong>Christian group</strong> on the Berkeley campus. We have fun together, take trips, ask the tough questions, and study the Bible.
-                <div style="height:40px;">&nbsp;</div>
+                <!--We are a <br /><strong>Christian group</strong> on the Berkeley campus. We have fun together, take trips, ask the tough questions, and study the Bible.
+                <div style="height:40px;">&nbsp;</div>-->
         		<div id="navlinks">
-            		<a href="<?php echo get_permalink( 3158 ); ?>" class="grid_3 alpha"><span>&rarr;</span>learn more about us</a>
-			<a href="<?php echo get_permalink( 3250 ); ?>" class="grid_3 alpha"><span>&rarr;</span>get connected</a>
-            		<a href="<?php echo get_permalink(3142); ?>" class="grid_3 alpha"><span>&rarr;</span>check out past posts</a>
+            		<a href="<?php echo get_permalink( 3158 ); ?>">About Us &#183;</a>
+			<a href="<?php echo get_permalink( 3250 ); ?>">LIFE Groups &#183;</a>
+			<a href="/berkeley/office-hours">Office Hours &#183;</a>
+			<a href="<?php echo get_permalink(3839); ?>">Signups &#183;</a>
+			<a href="<?php echo get_permalink(3142); ?>">Past Posts &#183;</a>
         		</div>
+	<div id="facebook-icon">
+		<a href="http://www.facebook.com/acts2fellowship" target="_blank">
+			<img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/09/facebook-button-e1317236091409.png" alt="Visit Our Facebook Page!"/>
+		</a>
+	</div>
             </h2>
             
-            <a href="http://www.facebook.com/acts2fellowship" class="featured-sidebar-button" target="_blank">
+            <!--<a href="http://www.facebook.com/acts2fellowship" class="featured-sidebar-button" target="_blank">
                 <img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/5154716553_73f45a3f00_o.png" alt="Visit us on Facebook!" />
-            </a>
-
-            <a href="/berkeley/office-hours" class="featured-sidebar-button" target="_blank">
-                <img src="http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/office-hours-button.png" alt="Come pay us a visit!" />
-            </a>
+            </a>-->
 
             <!--<a href="/berkeley/thrive" class="featured-sidebar-button" target="_blank">
                 <img src="http://www.acts2fellowship.org/berkeley/wp-content/themes/a2f-berkeley-2011/images/Thrive_web_button.jpg" alt="Thrive!" />

@@ -133,11 +133,9 @@ a:hover { color: #ff9c00; }
 small { color: #888; }
 
 hr {
-	height: 4px;
-	background-color: #eee;
+    height: 0;
 	border: 0;
-	border-top: 1px dashed #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #999;
 }
 
 .error { color: #c00; }
@@ -154,8 +152,6 @@ hr {
 #header a {
     display: inline-block;
 }
-
-.header_section { height: 320px; }
 
 /* END HEADER */
 
@@ -225,6 +221,10 @@ hr {
 
 /* LEFT SIDEBAR */
 
+#left-sidebar-widget ul {
+	
+}
+
 #photo-sidebar .featured-sidebar-button {
     display: inline-block;
     margin-bottom: 30px;
@@ -239,7 +239,10 @@ hr {
 
 #photo-sidebar { overflow: hidden; }
 
-#photo-sidebar h2.header_section { margin-top: 30px; height: 260px; }
+#photo-sidebar h2.header_section {
+	margin: 30px 0 30px;
+	min-height: 309px;
+}
 
 #photo-sidebar h2.header_section, #photo-sidebar h2.header_section a {
     font-size: 18px;
@@ -253,20 +256,20 @@ hr {
 
 #photo-sidebar h2.header_section #navlinks {
     margin-top: 20px;
-    border-top: 1px solid #175683;
     padding-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 60px;
 }
 
 #photo-sidebar h2.header_section #navlinks a {
-    font-size: 22px;
+    display: block;
+    font-size: 28px;
     line-height: 1.2;
 }
 
 #photo-sidebar h2.header_section a {
     color: #063461;
     color: #eee;
-    opacity: 1;
-	filter:alpha(opacity=100);
 }
 #photo-sidebar h2.header_section a:hover { color: #ff9c00; text-shadow: none; }
 #photo-sidebar h2.header_section a span {
@@ -292,6 +295,20 @@ hr {
     filter: alpha(opacity=100);
 }
 
+#facebook-icon a:hover {
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+#facebook-icon a {
+	opacity: 0.75;
+	filter:alpha(opacity=75);
+}
+
+#facebook-icon a img {
+	padding-top: 6px;
+}
+
 /* RIGHT SIDEBAR */
 #sidebar_wrapper { padding-top: 40px; }
 #sidebar {
@@ -309,7 +326,7 @@ hr {
     text-transform: none;
 	text-align: center;
 	text-shadow: 0 1px 0 #333;
-	margin: 0 0 10px;
+	margin: 15px 0 10px;
 	border: 0;
 }
 
@@ -376,6 +393,9 @@ ul.categories li a {
 }
 
 #get_recent_comments_wrap li a {
+    display: block;
+    max-height: 30px;
+    overflow: hidden;
 	color: #8C9BA1;
 	font-size: 12px;
 	line-height: 1.2;
@@ -487,24 +507,25 @@ table.dt { width: 100%; }
 /* BLOG ENTRY: UPCOMING EVENTS */
 
 .entry h3 {
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: none;
-	margin-top: 30px;
+	margin-top: 15px;
+	color: #222;
 }
 
 /* override to fix upcoming shift on main page */
 #home .photo .prefix_4 { padding-left: 0; }
 
 .entry .upcoming {
-	border: 1px solid #ddd; border-left: none; border-right: none; 
-	margin-top: 10px; margin-bottom: 10px;
-	padding-top: 10px; padding-bottom: 15px;
+	border: 1px solid #ddd; border-bottom: none; border-left: none; border-right: none; 
+	margin-top: 0px; margin-bottom: 6px;
+	padding-top: 6px; padding-bottom: 15px;
 }
 .entry .upcoming .grid_8 div, .entry .upcoming .grid_4 div {
 	font-family: georgia;
-	font-size: 18px;
+	font-size: 16px;
 	font-style: italic;
-	color: #666;
+	color: #444;
 	padding-left: 23px;
 	padding-top: 5px;
 }
@@ -514,7 +535,10 @@ table.dt { width: 100%; }
 .entry .upcoming .location { background: url(images/upcoming-location.png) 2px 5px no-repeat; }
 .entry .upcoming .otherinfo { background: url(images/upcoming-otherinfo.png) left 5px no-repeat; }
 
-.entry .upcoming a { color: #999; text-decoration: underline; }
+.entry .upcoming a {
+	color: #666;
+	text-decoration: underline;
+}
 
 .entry .entry-footer {
 	margin-top: 15px;
@@ -1029,13 +1053,14 @@ blockquote cite {
 }
 
 #background-image-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
+    xxbackground: url(images/light_alu.png) repeat #1B1E5C;
     background-color: #1B1E5C;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
+    opacity: 0.5;
+    filter: alpha(opacity=40);
     z-index: -1;
 }
 
@@ -1140,10 +1165,11 @@ blockquote cite {
 .gcal-widget-post {
 	margin-bottom: 35px;
 	padding-bottom: 10px;
-    background-color: rgba(0,0,0,0.2);
-	     -moz-border-radius: 5px;
-	  -webkit-border-radius: 5px;
-	          border-radius: 5px;
+	background-color: rgba(0,0,0,0.3);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	min-height: 290px;
 }
 .gcal-widget-post div{ color: #fff; }
 .gcal-widget-post a { color: #fff; text-decoration: underline; }
@@ -1166,9 +1192,9 @@ blockquote cite {
 	font-size: 36px;
 	position: absolute;
 	right: 5px;
-	opacity: .10;
+	opacity: .13;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-	filter: alpha(opacity=10);
+	filter: alpha(opacity=13);
 	z-index: 1;
 }
 .gcal-widget-featured .gcal-widget-day {
@@ -1741,9 +1767,33 @@ div.spch-bub-outside {
 }
 
 .signups {
-	margin: 0px 10px;
+	margin: 0px 10px 30px;
+	display: inline-block;
 }
 
 .signups p {
 	line-height: 28px;
 }
+
+.signups-left {
+	float: left;
+	margin-right: 10px;
+}
+
+.signups-right {
+	float: right;
+	margin-left: 10px;
+}
+
+.signup-link {
+	background-color: #900;
+	color: white;
+	margin: 10px 0px 15px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 7px;
+	cursor: pointer;
+	height: 30px;
+}
+
