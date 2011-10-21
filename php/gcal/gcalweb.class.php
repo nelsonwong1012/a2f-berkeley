@@ -154,7 +154,7 @@ class gCalWeb extends gCal {
 
 	// requires:
 	// jquery - http://jquery.com
-	// tiptip - http://code.drewwilson.com/entry/tiptip-jquery-plugin		
+	// tiptip - http://code.drewwilson.com/entry/tiptip-jquery-plugin
 	function widgetDisplay_steel() {
 		$events = $this->events;
 		if (!$events) return '';
@@ -177,7 +177,7 @@ class gCalWeb extends gCal {
 			
 			// .featured (or .entry)
 			$entryclass = ($event['isfeatured']) ? 'featured' : 'entry';
-			$displaystring .= '<div class="gcal-widget-' . $entryclass . ' clearfix">';
+			$displaystring .= '<div class="gcal-widget-' . $entryclass . ' clearfix class="tooltip" title="' . $event['content'] . '">';
             
 			if ($event['content'] || $event['post_link']) {
 			    if ($event['post_link']) {
