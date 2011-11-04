@@ -159,7 +159,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
         <div class="grid_10">
             <h1 id="header">
                 <a href="<?php echo get_option('home'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="232" alt="<?php bloginfo('name'); ?>" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="197" alt="<?php bloginfo('name'); ?>" />
                 </a>
             </h1>
       	<div id="content" class="grid_8 prefix_1 suffix_1 alpha">
