@@ -77,7 +77,7 @@ body {
 	padding: 0;
 	width: 100%;
 	min-width: 1080px;
-    background: transparent url(images/content-bg-65.png) top center repeat-y;
+    background: transparent url(images/content-bg.png) top center repeat-y;
 }
 
 body, div, p, span, a, input, textarea {
@@ -143,7 +143,7 @@ hr {
 /* HEADER */
 
 #header {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -240,8 +240,7 @@ hr {
 #photo-sidebar { overflow: hidden; }
 
 #photo-sidebar h2.header_section {
-	margin: 30px 0 30px;
-	min-height: 309px;
+	margin: 30px 0;
 }
 
 #photo-sidebar h2.header_section, #photo-sidebar h2.header_section a {
@@ -277,7 +276,7 @@ hr {
 }
 
 #photo-sidebar img {
-    max-width: 175px;
+    max-width: 200px;
 }
 
 .sidebar-photos a img {
@@ -293,6 +292,10 @@ hr {
 .sidebar-photos a:hover img {
     opacity: 1;
     filter: alpha(opacity=100);
+}
+
+#facebook-icon {
+    margin-bottom: 50px;
 }
 
 #facebook-icon a:hover {
@@ -316,6 +319,11 @@ hr {
 	margin-bottom: 10px;
 }
 
+#sidebar .section,
+#photo-sidebar .section {
+    margin-bottom: 50px;
+}
+
 #sidebar h3, #photo-sidebar h3, #sidebar h2.widgettitle, #photo-sidebar h2 {
     font-family: LeagueGothicRegular, Arial;
     font-weight: normal;
@@ -335,6 +343,7 @@ hr {
 }
 
 #sidebar .recent-post {
+    position: relative;
     display: block;
     opacity: 0.7;
     filter: alpha(opacity=70);
@@ -350,6 +359,18 @@ hr {
     margin: -2px 0 2px;
     opacity: 1;
     filter: alpha(opacity=100);
+}
+
+#sidebar .recent-post h4 {
+    position: absolute;
+    top: 0;
+    float: left;
+    width: 100%;
+    padding: 3px 5px;
+    background: #666;
+    background: rgba(0,0,0,0.25);
+    text-shadow: 1px 1px 2px #000;
+    color: #fff;
 }
 
 
@@ -474,9 +495,18 @@ ul.categories-lg li a { display: block; }
 .photo { overflow: hidden; margin: 0 0 20px 0; }
 .photo img, #sidebar img { height: auto; }
 .photo img { max-width: 500px; }
-#sidebar img { max-width: 175px; }
+#sidebar img { max-width: 200px; }
 .post img, #sidebar img { height: auto; }
-.post img { max-width: 500px; }
+
+.post img {
+    max-width: 550px;
+}
+
+.post img[width="500"] {
+    display: block;
+    margin: 0 auto;
+}
+
 .post a > img {
     -webkit-transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;
@@ -495,8 +525,6 @@ ul.categories-lg li a { display: block; }
     margin-right: auto;
     margin-left: auto;
 }
-
-#sidebar img { max-width: 175px; }
 
 table.dt { width: 100%; }
 .dt td { border: 1px solid #ccc; text-align: center }
@@ -621,7 +649,7 @@ a.read-more span {
 /* Begin Page
  * --------------------------------------------- */
 #page #outer {
-    background-image: url(images/content-large-bg-70.png);
+    background-image: url(images/content-bg-large.png);
 }
 
 #page h2 {
