@@ -25,7 +25,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico?1" />
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/1040_16_col.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/1120_16_col.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/tipTip.css" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -83,9 +83,8 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <div id="outer">
 
     <?php if ($id == 'page') { ?>
-        
             <h1 id="header">
-        	    <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="232" alt="<?php bloginfo('name'); ?>" /></a>
+        	    <a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_url'); ?>/images/a2f_logo_ppl_460.png" width="460" height="197" alt="<?php bloginfo('name'); ?>" /></a>
             </h1>
         </a>
     <?php } //endif is_page ?>
@@ -99,17 +98,25 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
                 <div style="height:40px;">&nbsp;</div>-->
         		<div id="navlinks">
             		<a href="<?php echo get_permalink( 3158 ); ?>">About Us &#183;</a>
-			<a href="<?php echo get_permalink( 3250 ); ?>">LIFE Groups &#183;</a>
-			<a href="/berkeley/office-hours">Office Hours &#183;</a>
-			<a href="<?php echo get_permalink(3839); ?>">Signups &#183;</a>
-			<a href="<?php echo get_permalink(3142); ?>">Past Posts &#183;</a>
+        			<a href="<?php echo get_permalink(3839); ?>">Signups &#183;</a>
+        			<a href="<?php echo get_permalink(3142); ?>">Past Posts &#183;</a>
         		</div>
-	<div id="facebook-icon">
-		<a href="http://www.facebook.com/acts2fellowship" target="_blank">
-			<img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/09/facebook-button-e1317236091409.png" alt="Visit Our Facebook Page!"/>
-		</a>
-	</div>
             </h2>
+            
+            <div id="facebook-icon">
+        		<a href="http://www.facebook.com/acts2fellowship" target="_blank">
+        			<img src="<?php bloginfo('template_url'); ?>/images/facebook-button.png" alt="Visit Our Facebook Page!"/>
+        		</a>
+        	</div>
+        	
+        	<div class="section">
+            	<h3>Get Connected</h3>
+            	<ul>
+            	    <li><a href="/berkeley/office-hours"><img src="<?php bloginfo('template_url'); ?>/images/office-hours-button.png" width="200" alt="Office Hours with Rick & Sue" /></a></li>
+            	    <li><a href="<?php echo get_permalink( 3250 ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/life-groups-btn.png" width="200" alt="Life Groups" /></a></li>
+            	    <li><a href="https://spreadsheets.google.com/viewform?hl=en&formkey=dHBsYXpSOVluRHhrbmY0WFZEQnBuZ3c6MQ&ndplr=1" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/c101-btn.png" width="200" alt="Course 101" /></a></li>
+            	</ul>
+        	</div>
             
             <!--<a href="http://www.facebook.com/acts2fellowship" class="featured-sidebar-button" target="_blank">
                 <img src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/5154716553_73f45a3f00_o.png" alt="Visit us on Facebook!" />

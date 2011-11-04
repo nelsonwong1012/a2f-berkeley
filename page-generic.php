@@ -8,9 +8,9 @@ Template Name: Generic Page
 	<div id="content">
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	    <h2 class="grid_16"><?php outputcustom('title'); ?></h2>
+	    <h2 class="grid_14 prefix_1"><?php outputcustom('title'); ?></h2>
 	    <div class="post" id="post-<?php the_ID(); ?>">
-	        <div class="page">
+	        <div class="page grid_14 prefix_1">
 		    <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 		</div><!-- end entry -->
 	    
