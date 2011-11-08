@@ -6,7 +6,7 @@ $('#background-image').bind("load", function() {
     bgResize();
     
     // Reset the body background
-    $('body').css({backgroundColor: 'transparent'});    
+    $('body').css({backgroundColor: 'transparent'});
 }, false);
 $('#background-image').attr('src',background_image_src);*/
 
@@ -43,6 +43,10 @@ bgResize();
 //$(document).ready(bgResize);
 
 
-/*$(function() {
-    $("#sidebar .tooltip").tipTip();
-});*/
+$(function() {
+    $("#sidebar .tooltip").tipTip({
+        maxWidth: "200px",
+        defaultPosition: 'left',
+        delay: 200
+    });
+});
