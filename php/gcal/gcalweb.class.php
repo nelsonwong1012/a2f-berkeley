@@ -177,7 +177,7 @@ class gCalWeb extends gCal {
 			
 			// .featured (or .entry)
 			$entryclass = ($event['isfeatured']) ? 'featured' : 'entry';
-			$displaystring .= '<div class="gcal-widget-' . $entryclass . ' clearfix class="tooltip" title="' . $event['content'] . '">';
+			$displaystring .= '<div class="gcal-widget-' . $entryclass . ' clearfix tooltip" title="' . $event['content'] . '">';
             
 			if ($event['content'] || $event['post_link']) {
 			    if ($event['post_link']) {
@@ -344,4 +344,3 @@ class gCalWeb extends gCal {
 	} // end pubDate()
 } // end gCalWeb
 ?>
-

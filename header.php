@@ -34,6 +34,7 @@ $frontpage_title = 'Christian Fellowship @ UC Berkeley';
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tipTip.js"></script>
 <!-- <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.countdown.min.js"></script> -->
 <!--
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
