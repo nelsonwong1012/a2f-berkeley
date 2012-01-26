@@ -16,14 +16,7 @@
 <!-- <img id="background-image" src="http://farm3.static.flickr.com/2388/5745061343_ccf52d581e_b_d.jpg" alt="" /> --> <!-- graduation at greek theatre -->
 <!-- <img id="background-image" src="http://farm4.static.flickr.com/3044/5712668438_4680f1ce2d_b_d.jpg" alt="" /> --> <!-- sister jumping on beach -->
 <!-- <img id="background-image" src="http://farm7.static.flickr.com/6016/6000098717_ea1bc8a15e_b_d.jpg" alt="" /> --> <!-- a2f on cliff -->
-
-<div id="tiptip_holder">
-    <div id="tiptip_content">
-        <div id="tiptip_arrow">
-            <div id="tiptip_arrow_inner"></div>
-        </div>
-    </div>
-</div>
+>
 
 <img id="background-image" src="http://www.acts2fellowship.org/berkeley/wp-content/uploads/2011/08/campanile_bay_silhouette.jpg" alt="" /> <!-- campanile bay silhouette -->
 <!-- <img id="background-image" src="http://farm3.static.flickr.com/2081/1807629402_c723a422ca_b_d.jpg" alt="" /> --> <!-- campanile from music building -->

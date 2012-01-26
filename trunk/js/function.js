@@ -47,6 +47,13 @@ $(function() {
     $("#sidebar .tooltip").tipTip({
         maxWidth: "200px",
         defaultPosition: 'left',
-        delay: 200
+        delay: 250
+    });
+
+    $("#content .tooltip").tipTip({
+        maxWidth: "250px",
+        defaultPosition: 'top',
+        edgeOffset: 0,
+        delay: 250
     });
 });
