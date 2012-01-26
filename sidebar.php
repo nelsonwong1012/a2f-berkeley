@@ -14,7 +14,7 @@
 	        $gcal = new gCalWeb($cal, array(
                 'debug' => 0,
       	        	'shows' => 'normal',
-              		'numdays' => 6
+              		'numdays' => 14
                ));
 
        		echo $gcal->widgetDisplay_steel();
