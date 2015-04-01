@@ -1,0 +1,1 @@
+Bug tracking and SVN repository for the A2F Berkeley blog: http://www.acts2fellowship.org/berkeley
